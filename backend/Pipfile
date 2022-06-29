@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+coverage = "*"
+flask = "*"
+flake8 = "*"
+flask-bcrypt = "*"
+flask-bootstrap = "*"
+flask-debugtoolbar = "*"
+flask-login = "*"
+flask-migrate = "*"
+flask-sqlalchemy = "*"
+flask-testing = "*"
+flask-wtf = "*"
+psycopg2-binary = "*"
+werkzeug = "*"
+flask-smorest = "*"
+marshmallow = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
