@@ -20,6 +20,8 @@ class BaseConfig:
     OPENAPI_SWAGGER_UI_PATH = "/swagger-ui"
     OPENAPI_SWAGGER_UI_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/"
 
+    OPENAPI_RAPIDOC_PATH = "/rapidoc"
+    OPENAPI_RAPIDOC_URL = "https://unpkg.com/rapidoc/dist/rapidoc-min.js"
     API_SPEC_OPTIONS = {
         'info': {'description': 'This is the backend API for alias check',
                  'termsOfService': 'http://helloreverb.com/terms/',
