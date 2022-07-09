@@ -6,7 +6,7 @@ const Home = () => {
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.05,
       },
     },
   };
@@ -22,12 +22,18 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.div initial="hidden" animate={"visible"} variants={container}>
-        <div className="container min-h-screen flex flex-col justify-center items-center bg-black">
-          <AnimatedText as="h1" text="Alias Check" className="text-white text-4xl">
-            coming soon
-          </AnimatedText>
-        </div>
+      <motion.div
+        variants={container}
+        className="min-h-screen flex flex-col items-center bg-black text-white text-5xl p-28"
+      >
+        <AnimatedText as="h1" text="Alias Check" size="8rem" />
+        <AnimatedText
+          as="p"
+          text="Be the first to own a username on any social media platform"
+          delay="2.5"
+          size="1rem"
+        />
+        <p>Coming Soon...</p>
       </motion.div>
     </>
   );

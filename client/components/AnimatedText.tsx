@@ -1,51 +1,52 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 /**
  * -----------------------------AnimatedCharacters----------------------------------
- * 
+ *
  *  __USAGE__ && __Definitions__
- * 
+ *
  *    accepts: {
  *                as: string,
  *                children: React.ReactNode,
  *                text: string,
  *                ...restProps: React.ComponentProps
  *           }
- * 
- *    as:
+ *
+ *    as: [Optional - Default = <span>]
  *        AnimatedCharacters is polymorphic - use the as Props to specify
  *        the type of HTMLElement
  *        example: <AnimatedCharacters as='div' />
- * 
- *    Children:
+ *
+ *    Children: [Optional]
  *        AnimatedCharacters accepts children props. The Child element
  *        is not animated and will be shown on the screen before, during
  *        and after the animation cycle.
  *        example: <AnimatedCharacters>The Frontend Team</AnimatedCharacters>
- * 
- *    Text:
+ *
+ *    Text: [Required]
  *        This props accepts the text to be animated.
  *        example: <AnimatedCharacters as="h1" text="We love to code" />
- * 
+ *
  *    ...restProps:
  *        This populate the component with attributes that are valid for a
  *         a given as prop value.
  *         example: <AnimatedCharacters as="a" href="#" text="Maxwell Codes" />
  *         href attribute is valid for a tag and will be accepted as an attribute.
- * 
- * 
+ *
+ *     Delay: [Optional - Default = 0]
+ *         This is used to set a time delay should you want the Animated characters
+ *          to be delayed for rendering
+ *
+ *      Size: [Optional - defaults = 1rem || 16px]
+ *          This is used to set the css font-size of the Text to be animated.
+ *
+ *
+ *
  *  __CORE DEPENDENCY__
  *       This animation is built upon FRAMER-MOTION
- * 
+ *
  * -----------------------------------------------------------------------------------------
  */
-
-
-
-interface IWrapper {
-  children: React.ReactNode;
-}
 
 /**
  * --------------------------GENERICS-----------------------
@@ -57,8 +58,10 @@ interface IWrapper {
  */
 type AnimatedCharactersProps<C extends React.ElementType> = {
   text: string;
+  size: string;
   as?: C;
   children?: React.ReactNode;
+  delay?: string;
 } & React.ComponentPropsWithoutRef<C>;
 
 /**
@@ -80,19 +83,6 @@ type AnimatedCharactersProps<C extends React.ElementType> = {
  */
 
 /**
- * --------------------------WRAPPER FUNCTION--------------------------
- *
- * The wrapper is used to encapsulate individual text to be
- * animated.
- * We will do this to prevent wrapping of words using CSS
- * ---------------------------------------------------------
- */
-const Wrapper = (props: IWrapper) => {
-  // We'll do this to prevent wrapping of words using CSS
-  return <span className="word-wrapper">{props.children}</span>;
-};
-
-/**
  * ---------------------------ANIMATED CHARACTERS--------------------
  * Handles the deconstruction of each word and character to setup for the
  * individual character animations
@@ -102,12 +92,14 @@ const AnimatedCharacters = <C extends React.ElementType = "span">({
   text,
   as,
   children,
+  delay = "0",
+  size,
   ...restProps
 }: AnimatedCharactersProps<C>) => {
   const Component = as || "span";
 
   // Framer Motion variant object, for controlling animation
-  const item = {
+  const item: Variants = {
     hidden: {
       y: "200%",
       color: "#0055FF",
@@ -115,9 +107,14 @@ const AnimatedCharacters = <C extends React.ElementType = "span">({
     visible: {
       y: 0,
       color: "#FF0088",
-      fontSize: "3rem",
-      fontWeight: "bold",
-      transition: { type: "spring", stiffness: 100, damping: 5 },
+      fontWeight: "700",
+      fontFamily: "poppins",
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 5,
+        delay: Number(delay),
+      },
     },
   };
 
@@ -140,32 +137,38 @@ const AnimatedCharacters = <C extends React.ElementType = "span">({
   });
 
   return (
-    <Component {...restProps} className="flex justify-center items-center flex-col space-y-6">
-      {words.map((_, index) => {
-        return (
-          // Wrap each word in the Wrapper component
-          <Wrapper key={index}>
-            {words[index].flat().map((element, index) => {
-              return (
-                <span
-                  style={{
-                    overflow: "hidden",
-                    display: "inline-block",
-                  }}
-                  key={index}
-                >
-                  <motion.span
-                    style={{ display: "inline-block" }}
-                    variants={item}
+    <Component {...restProps}>
+      <span className="container whitespace-nowrap">
+        {words.map((_, index) => {
+          return (
+            <span key={index}>
+              {words[index].flat().map((element, index) => {
+                return (
+                  <span
+                    style={{
+                      overflow: "hidden",
+                      display: "inline-block",
+                    }}
+                    key={index}
                   >
-                    {element}
-                  </motion.span>
-                </span>
-              );
-            })}
-          </Wrapper>
-        );
-      })}
+                    <motion.span
+                      style={{
+                        display: "inline-block",
+                        fontSize: `${size ?? "1rem"}`,
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      variants={item}
+                    >
+                      {element}
+                    </motion.span>
+                  </span>
+                );
+              })}
+            </span>
+          );
+        })}
+      </span>
       {children}
     </Component>
   );
