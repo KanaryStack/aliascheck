@@ -1,6 +1,48 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+/**
+ * -----------------------------AnimatedCharacters----------------------------------
+ * 
+ *  __USAGE__ && __Definitions__
+ * 
+ *    accepts: {
+ *                as: string,
+ *                children: React.ReactNode,
+ *                text: string,
+ *                ...restProps: React.ComponentProps
+ *           }
+ * 
+ *    as:
+ *        AnimatedCharacters is polymorphic - use the as Props to specify
+ *        the type of HTMLElement
+ *        example: <AnimatedCharacters as='div' />
+ * 
+ *    Children:
+ *        AnimatedCharacters accepts children props. The Child element
+ *        is not animated and will be shown on the screen before, during
+ *        and after the animation cycle.
+ *        example: <AnimatedCharacters>The Frontend Team</AnimatedCharacters>
+ * 
+ *    Text:
+ *        This props accepts the text to be animated.
+ *        example: <AnimatedCharacters as="h1" text="We love to code" />
+ * 
+ *    ...restProps:
+ *        This populate the component with attributes that are valid for a
+ *         a given as prop value.
+ *         example: <AnimatedCharacters as="a" href="#" text="Maxwell Codes" />
+ *         href attribute is valid for a tag and will be accepted as an attribute.
+ * 
+ * 
+ *  __CORE DEPENDENCY__
+ *       This animation is built upon FRAMER-MOTION
+ * 
+ * -----------------------------------------------------------------------------------------
+ */
+
+
+
 interface IWrapper {
   children: React.ReactNode;
 }
@@ -73,7 +115,8 @@ const AnimatedCharacters = <C extends React.ElementType = "span">({
     visible: {
       y: 0,
       color: "#FF0088",
-      // transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+      fontSize: "3rem",
+      fontWeight: "bold",
       transition: { type: "spring", stiffness: 100, damping: 5 },
     },
   };
@@ -96,11 +139,8 @@ const AnimatedCharacters = <C extends React.ElementType = "span">({
     return word.push("\u00A0");
   });
 
-  // // Get the tag name from tagMap-----------------------------
-  // const Tag = tagMap[props.type];-------------------------------
-
   return (
-    <Component {...restProps}>
+    <Component {...restProps} className="flex justify-center items-center flex-col space-y-6">
       {words.map((_, index) => {
         return (
           // Wrap each word in the Wrapper component
