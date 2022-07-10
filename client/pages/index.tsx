@@ -24,7 +24,7 @@ const Home = () => {
 
       <motion.div
         variants={container}
-        className="min-h-screen flex flex-col items-center bg-black text-white text-5xl p-28"
+        className="min-h-screen flex flex-col items-center bg-black text-white text-5xl justify-center"
       >
         <AnimatedText as="h1" text="Alias Check" size="8rem" />
         <AnimatedText
