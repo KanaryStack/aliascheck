@@ -14,6 +14,8 @@ Update *project/server/config.py*, and then run:
 $ export APP_NAME="ALIAS CHECK API"
 $ export APP_SETTINGS="app.config.ProductionConfig"
 $ export FLASK_DEBUG=0
+$ export TWITTER_CONSUMER_KEY="your twitter consumer key here"
+$ export TWITTER_CONSUMER_SECRET="your twitter consumer secret key here"
 ```
 By default the app is set to use the production configuration. If you would like to use the development configuration, you can alter the `APP_SETTINGS` environment variable:
 
