@@ -8,12 +8,11 @@ RUN apt-get update \
 
 RUN pip install pipenv
 
-# copy pipfile
-COPY [ "Pipfile" ,"Pipfile.lock","./"]
+# copy the requirements txt file
+COPY requirements.txt requirements.txt
 
-# set up packages 
-RUN pipenv install --system --deploy
-
+# install the dependencies
+RUN pip3 install -r requirements.txt
 
 # set working directory
 WORKDIR /app
