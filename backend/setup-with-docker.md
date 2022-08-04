@@ -8,6 +8,11 @@ Use this guide if you want to use Docker in your project.
 
 Update the environment variables in *docker-compose.yml*, and then build the images and spin up the containers:
 
+* Of particular importance are this two variables 
+  - TWITTER_CONSUMER_KEY=twitter_consumer_key_here
+  - TWITTER_CONSUMER_SECRET=twitter_consumer_secret_here
+    
+
 ```sh
 $ docker-compose up -d --build
 ```
