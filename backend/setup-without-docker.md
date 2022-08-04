@@ -6,6 +6,8 @@ Use this guide if you do NOT want to use Docker in your project.
 
 Create and activate a virtual environment, and then install the requirements.
 
+
+
 ### Set Environment Variables
 
 Update *project/server/config.py*, and then run:
