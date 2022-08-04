@@ -53,3 +53,11 @@ Lint:
 ```sh
 $ docker-compose run web flake8 project
 ```
+
+
+### Possible gotchas
+
+Should you encounter this error while trying to run the web service
+  - standard_init_linux.go:190: exec user process caused "no such file or directory" - Docker
+
+   then go to entrypoint.sh and change the End Of Line Sequence as in [this](https://stackoverflow.com/questions/51508150/standard-init-linux-go190-exec-user-process-caused-no-such-file-or-directory)
