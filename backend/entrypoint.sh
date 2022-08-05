@@ -2,7 +2,9 @@
 
 echo "Waiting for postgres..."
 
-while ! nc -z web-db 5432; do
+database=${DB:-web-db}
+
+while ! nc -z $database 5432; do
   sleep 0.1
 done
 

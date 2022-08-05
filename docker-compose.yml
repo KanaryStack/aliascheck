@@ -27,6 +27,7 @@ services:
       - FLASK_DEBUG=1
       - PYTHONUNBUFFERED=0
       - APP_SETTINGS=app.config.DevelopmentConfig
+      - DB=db
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/users_dev
       - DATABASE_TEST_URL=postgresql://postgres:postgres@db:5432/users_test
       - SECRET_KEY=change_me_in_prod
