@@ -2,7 +2,9 @@ import abc
 
 
 from app.platforms.response import AliasCheckResponse
-class BasePlatformClient():
+
+
+class BasePlatformClient:
     @abc.abstractmethod
-    def check_alias(self,alias:str)->AliasCheckResponse:
+    def check_alias(self, alias: str) -> AliasCheckResponse:
         pass

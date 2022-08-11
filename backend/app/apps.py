@@ -2,12 +2,11 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from app.api.healthcheck import hc_bt 
+from app.api.healthcheck import hc_bt
 from flask_smorest import Api
 from app.api.models import db
 from app.bcrypt import bcrpt
 from app.api.alias import alias_bt
-
 
 
 migrate = Migrate()
@@ -15,14 +14,10 @@ migrate = Migrate()
 
 def create_app(script_info=None):
     # instantiating the app
-    app = Flask(
-        __name__
-    )
+    app = Flask(__name__)
 
     # set config
-    app_settings = os.getenv(
-        "APP_SETTINGS", "app.config.DevelopmentConfig"
-    )
+    app_settings = os.getenv("APP_SETTINGS", "app.config.DevelopmentConfig")
 
     app.config.from_object(app_settings)
 
