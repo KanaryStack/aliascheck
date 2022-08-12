@@ -19,6 +19,8 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@web-db:5432/users_dev
       - DATABASE_TEST_URL=postgresql://postgres:postgres@web-db:5432/users_test
       - SECRET_KEY=change_me_in_prod
+      - TWITTER_CONSUMER_KEY=twitter_consumer_key_here
+      - TWITTER_CONSUMER_SECRET=twitter_consumer_secret_here
     
     depends_on:
       - web-db

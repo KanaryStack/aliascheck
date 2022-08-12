@@ -6,14 +6,14 @@ import coverage
 
 from flask.cli import FlaskGroup
 
-from app import create_app,db
+from app.apps import create_app, db
 
-app=create_app()
+app = create_app()
 
-cli=FlaskGroup(create_app=create_app)
+cli = FlaskGroup(create_app=create_app)
 
 # code coverage
-COV=coverage.coverage(
+COV = coverage.coverage(
     branch=True,
     include="app/*",
     omit=[
@@ -23,11 +23,13 @@ COV=coverage.coverage(
 
 COV.start()
 
+
 @cli.command()
 def create_db():
     db.drop_all()
     db.create_all()
     db.session.commit()
+
 
 @cli.command()
 def test():
@@ -35,8 +37,8 @@ def test():
     Runs the unit tests without test coverage
     """
 
-    tests=unittest.TestLoader().discover("app/tests",pattern="test*.py")
-    result=unittest.TextTestRunner(verbosity=2).run(tests)
+    tests = unittest.TestLoader().discover("app/tests", pattern="test*.py")
+    result = unittest.TextTestRunner(verbosity=2).run(tests)
 
     if result.wasSuccessful():
         sys.exit(0)
@@ -44,15 +46,15 @@ def test():
     else:
         sys.exit(1)
 
-    
+
 @cli.command()
 def cov():
-    """ 
+    """
     Runs the unit tests with coverage
     """
 
-    tests=unittest.TestLoader().discover("app/tests","test*.py")
-    results=unittest.TextTestRunner().run(tests)
+    tests = unittest.TestLoader().discover("app/tests", "test*.py")
+    results = unittest.TextTestRunner().run(tests)
 
     if results.wasSuccessful():
         COV.stop()
@@ -66,15 +68,15 @@ def cov():
     else:
         sys.exit(1)
 
-    
+
 @cli.command
 def flake():
     """
     Runs flake8 on the project
     """
 
-    subprocess.run(["flake8","app"])
+    subprocess.run(["flake8", "app"])
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     cli()

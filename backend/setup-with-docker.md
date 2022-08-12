@@ -8,6 +8,11 @@ Use this guide if you want to use Docker in your project.
 
 Update the environment variables in *docker-compose.yml*, and then build the images and spin up the containers:
 
+* Of particular importance are this two variables 
+  - TWITTER_CONSUMER_KEY=twitter_consumer_key_here
+  - TWITTER_CONSUMER_SECRET=twitter_consumer_secret_here
+    
+
 ```sh
 $ docker-compose up -d --build
 ```
@@ -48,3 +53,11 @@ Lint:
 ```sh
 $ docker-compose run web flake8 project
 ```
+
+
+### Possible gotchas
+
+Should you encounter this error while trying to run the web service
+  - standard_init_linux.go:190: exec user process caused "no such file or directory" - Docker
+
+   then go to entrypoint.sh and change the End Of Line Sequence as in [this](https://stackoverflow.com/questions/51508150/standard-init-linux-go190-exec-user-process-caused-no-such-file-or-directory)

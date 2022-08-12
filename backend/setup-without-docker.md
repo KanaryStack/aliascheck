@@ -6,6 +6,38 @@ Use this guide if you do NOT want to use Docker in your project.
 
 Create and activate a virtual environment, and then install the requirements.
 
+  To create a virtual environment run the command
+
+```py
+python3 -m venv env
+```
+
+This will create a virtual environment in your current folder called 'env'
+
+To activate this virtual environment:
+
+If on windows run
+
+```
+env/Scripts/activate
+```
+
+If on Linux and derivations
+```sh
+source env/bin/activate
+```
+
+There after you can install the required packages with pip.
+
+To install all the required packages for this project run 
+
+```sh
+    pip install -r requirements.txt
+```
+
+
+
+
 ### Set Environment Variables
 
 Update *project/server/config.py*, and then run:
@@ -14,6 +46,8 @@ Update *project/server/config.py*, and then run:
 $ export APP_NAME="ALIAS CHECK API"
 $ export APP_SETTINGS="app.config.ProductionConfig"
 $ export FLASK_DEBUG=0
+$ export TWITTER_CONSUMER_KEY="your twitter consumer key here"
+$ export TWITTER_CONSUMER_SECRET="your twitter consumer secret key here"
 ```
 By default the app is set to use the production configuration. If you would like to use the development configuration, you can alter the `APP_SETTINGS` environment variable:
 
