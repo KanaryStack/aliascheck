@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  client:
+    container_name: client
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+       - ./client:/usr/src/app/client
+       - /usr/src/app/client/node_modules
+       - /usr/src/app/client/.next
+    depends_on:
+      - server
+
+  server:
+    container_name: server
+    build:
+      context: ./backend
+    volumes:
+      - './backend:/app'
+    ports:
+      - 5000:5000
+    environment:
+      - APP_NAME={{aliascheck.app_name}}
+      - FLASK_DEBUG=1
+      - PYTHONUNBUFFERED=0
+      - APP_SETTINGS=app.config.DevelopmentConfig
+      - DB=db
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/users_dev
+      - DATABASE_TEST_URL=postgresql://postgres:postgres@db:5432/users_test
+      - SECRET_KEY=change_me_in_prod
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    build:
+      context: ./backend/app/db
+    ports:
+      - 5432:5432
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASS=
