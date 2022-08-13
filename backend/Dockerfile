@@ -24,4 +24,4 @@ COPY . /app
 EXPOSE 5000
 
 # run server
-CMD ["./entrypoint.sh"]
+CMD ["/app/entrypoint.sh"]
