@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    // "baseUrl": "./server",
-    // "rootDir": "./server",
     "lib": ["dom", "dom.iterable", "esnext"],
     "types": ["node", "jest"],
     "allowJs": false,
