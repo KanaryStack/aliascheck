@@ -34,5 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 .env
-server/**/**.js
 server.js
+dist/
