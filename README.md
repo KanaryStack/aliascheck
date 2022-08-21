@@ -8,6 +8,23 @@ This is project is structured so that the developer can choose to set it up with
 <br />
 
 # **PROJECT SETUP**
+## **Cloning Project**
+Clone this repo and change directory into the project root folder by running the following commands:
+
+```bash
+git clone https://github.com/KanaryStack/aliascheck.git
+```
+>NOTE:
+>If you have setup an SSH connection to this repo, you can run this command instead:
+>```bash
+>git clone git@github.com:KanaryStack/aliascheck.git
+>```
+
+then switch to the project root folder like so:
+```bash
+cd aliascheck
+```
+
 ## **With Docker Compose**
 To start the project using Docker, even from scratch, run the following command:
 
