@@ -26,7 +26,7 @@ cd aliascheck
 ```
 then switch to last stable branch with Flask backend:
 ```bash
-git checkout 3f20eaa3aed83626d17d846c0f955a16e3f24737
+git checkout 940bc4d36f8a34e65373e080024cf98d97b4cf52
 ```
 
 ## **Starting Up the Project**
