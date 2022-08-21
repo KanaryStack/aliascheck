@@ -20,11 +20,16 @@ git clone https://github.com/KanaryStack/aliascheck.git
 >git clone git@github.com:KanaryStack/aliascheck.git
 >```
 
-then switch to the project root folder like so:
+and go to the project root folder like so:
 ```bash
 cd aliascheck
 ```
+then switch to last stable branch with Flask backend:
+```bash
+git checkout 3f20eaa3aed83626d17d846c0f955a16e3f24737
+```
 
+## **Starting Up the Project**
 ## **With Docker Compose**
 To start the project using Docker, even from scratch, run the following command:
 
