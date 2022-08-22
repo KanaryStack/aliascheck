@@ -1,11 +1,19 @@
-FROM node:16-slim
-
-WORKDIR /usr/src/app/client
-
-COPY package*.json ./
-
+FROM node:16.17.0-alpine AS builder
+WORKDIR /usr
+# COPY package.json ./
+# COPY tsconfig.json ./
+COPY . .
+RUN ls -a
 RUN npm install
+RUN npm run build
 
-EXPOSE 3000
+## this is stage two , where the app actually runs
 
-CMD ["npm", "run", "dev"]
+FROM node:16.17.0-alpine
+WORKDIR /usr
+COPY package.json .
+RUN npm install --only=production
+COPY --from=builder /usr/dist .
+RUN npm install pm2 -g
+EXPOSE ${PORT}
+CMD ["pm2-runtime","server.js"]
