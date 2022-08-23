@@ -7,14 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  server:
+    name: Server Node.js ${{ matrix.node-version }}
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [16.x,17.x]
-
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -24,3 +22,21 @@ jobs:
       - run: npm install
       - run: npm run build --if-present
       - run: npm test
+  client:
+    name: Client Node.js ${{ matrix.node-version }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run lint --if-present
+      - run: npm run build --if-present
