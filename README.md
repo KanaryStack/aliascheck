@@ -50,6 +50,7 @@ You should now be able to see the frontend at [http://localhost:3000/](http://lo
 ## **Backend**
 To start the backend application, make sure you have typescript installed on your system. Checkout [https://www.typescriptlang.org/download](https://www.typescriptlang.org/download). Once installed, run;
 ```bash
+cp .env.sample .env
 npm install
 npm run dev
 ```
