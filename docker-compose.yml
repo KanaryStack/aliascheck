@@ -3,6 +3,7 @@ version: '3.5'
 services:
   client:
     container_name: client
+    user: node
     build:
       context: ./client
     ports:

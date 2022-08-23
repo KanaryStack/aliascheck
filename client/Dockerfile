@@ -4,7 +4,9 @@ WORKDIR /usr/src/app/client
 
 COPY package*.json ./
 
-RUN npm install
+RUN mkdir .next && npm install
+
+RUN chown -Rh node:node .next node_modules
 
 EXPOSE 3000
 
