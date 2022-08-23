@@ -1,4 +1,4 @@
-import {logger, app} from './server/app';
+import {logger, app} from './app';
 import * as dotenv from 'dotenv';
 
 dotenv.config();

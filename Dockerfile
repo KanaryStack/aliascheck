@@ -14,6 +14,5 @@ WORKDIR /usr
 COPY package.json .
 RUN npm install --only=production
 COPY --from=builder /usr/dist .
-RUN npm install pm2 -g
 EXPOSE ${PORT}
-CMD ["pm2-runtime","server.js"]
+CMD ["npm","run","dev"]

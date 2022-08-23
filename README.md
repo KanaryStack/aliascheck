@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **ALIAS CHECK**
 
-## Getting Started
+The Alias Check helps confirm the availability of a username on different social networks. While it is intended as a learning project by the [Tech Interviews Nigeria](https://www.meetup.com/technicalinterviews/) that would introduce participants to different technologies in fullstack development, ranging from frontend technologies like [NextJS](https://nextjs.org/) to [NodeJS](https://nodejs.org/en/about/) and [SQLite](https://www.sqlite.org/index.html) or [Postgres](https://www.postgresql.org/) on the backend in addition to [Docker](https://www.docker.com/) for development, its utility is quite apparent. For example, small businesses can see the application in the selection of an available and catchy name among major social media platform.
 
-First, run the development server:
+This is project is structured so that the developer can choose to set it up with or without Docker.
+
+
+<br />
+
+# **PROJECT SETUP**
+## **With Docker Compose**
+To start the project using Docker, even from scratch, run the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
+cp .env.sample .env
+docker-compose up
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then go to [http://localhost:3000/](http://localhost:3000/) to access the **frontend** or [http://localhost:8080/](http://localhost:8080/) to access the **backend**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### **Backend-only Development**
+For **backend developers** that might only need to run the `server` and `database`, run the following command:
+```bash
+docker-compose up server
+```
+### **Frontend-only Development**
+For **frontend developers** who might not need access to the backend for the features they want to add, stop other services besides `client` after starting up:
+```bash
+docker-compose up && \
+docker stop $(docker-compose ps --services | grep -v client)
+```
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Checkout docker-compose [documentation](https://docs.docker.com/compose/reference/) on some of the commandline features available.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## **Without Docker Compose**
+Though this project was built for easy startup with Docker, it can also be run without Docker. You would need to run the commands on two terminals, one for the *frontend* and the other for the *backend*:
 
-## Learn More
+## **Frontend**
+On one terminal, go to the frontend folder named `client`, install dependencies and run the development server:
+```bash
+cd client
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+You should now be able to see the frontend at [http://localhost:3000/](http://localhost:3000/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## **Backend**
+To start the backend application, make sure you have typescript installed on your system. Checkout [https://www.typescriptlang.org/download](https://www.typescriptlang.org/download). Once installed, run;
+```bash
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Access the application at the address [http://localhost:8080/](http://localhost:8080/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Testing
+From the root directory;
+
+```sh
+npm run test
+```
+
