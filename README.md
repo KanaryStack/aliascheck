@@ -55,7 +55,7 @@ npm run dev
 ```
 
 
-Access the application at the address [http://localhost:8080/](http://localhost:8080/)
+Access the application at the address [http://localhost:8080/health](http://localhost:8080/health)
 
 ### Testing
 From the root directory;
