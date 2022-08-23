@@ -1,0 +1,8 @@
+.dockerignore
+*.md
+node_modules
+build
+client
+.github
+dist
+.env
