@@ -37,6 +37,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run lint --if-present
-      - run: npm run build --if-present
+      - run: pwd && ls -l && npm install
+      - run: pwd && ls -l && npm run lint --if-present
+      - run: pwd && ls -l && npm run build --if-present
