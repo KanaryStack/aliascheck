@@ -8,26 +8,15 @@ import Box from "@mui/material/Box";
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Alias Check</title>
-        <meta
-          name="description"
-          content="Choose an Alias for any social platform before anyone"
-        />
-      </Head>
-      <Container maxWidth="lg">
-        <Box
-          sx={{
-            my: 4,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Typography variant="h4" component="h1" gutterBottom>
-            AliasCheck - Nextjs + Typescript + Material UI
-          </Typography>
-        </Box>
-      </Container>
+      <Box>
+        <Head>
+          <title>Alias Check</title>
+          <meta
+            name="description"
+            content="Choose an Alias for any social platform before anyone"
+          />
+        </Head>
+      </Box>
     </>
   );
 };
