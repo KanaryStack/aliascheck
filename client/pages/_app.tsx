@@ -1,4 +1,3 @@
-import Layout from "../src/Layout/Layout";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/material/styles";
@@ -23,9 +22,7 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
   );
