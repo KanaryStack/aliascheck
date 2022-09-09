@@ -17,7 +17,6 @@ const Navbar = () => {
           </Box>
         )}
         <Box className={classes.aligned}>
-          {/* <Box> */}
           <Typography variant="h2" className={classes.title}>
             Aliascheck
           </Typography>

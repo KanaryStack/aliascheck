@@ -4,13 +4,14 @@ import { red } from "@mui/material/colors";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
-    xs: false;
+    xs: true;
     sm: true;
     md: true;
     lg: true;
     xl: true;
   }
 }
+
 declare module "@mui/material/styles" {
   interface Theme {
     appDrawer: {
@@ -26,14 +27,22 @@ declare module "@mui/material/styles" {
   }
 }
 const theme = createTheme({
-  breakpoints: {
-    values: {
+  breakpoints:  { 
+    keys: [
+      "xs", 
+      "sm", 
+      "md", 
+      "lg", 
+      "xl"
+    ], 
+    values: { 
+      xs: 368,
       sm: 425,
-      md: 768,
-      lg: 1024,
-      xl: 1440,
-    },
-  },
+      md: 601,
+      lg: 769,
+      xl: 1024,
+    } 
+  },    
   palette: {
     primary: {
       main: "#556cd6",
