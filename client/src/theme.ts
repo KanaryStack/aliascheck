@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
-// import { BreakpointOverrides } from "@material-ui/core/styles/createBreakpoints";
+
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {

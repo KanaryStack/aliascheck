@@ -28,7 +28,6 @@ const Navbar = () => {
               {!matches && <span className={classes.span}>with</span>}
               {!matches && <b style={{ display: "block" }}>Aliascheck</b>}
             </Typography>
-
             <Box className={classes.image}>
               <Image
                 src={`/${matches ? "image" : "iphone"}.svg`}

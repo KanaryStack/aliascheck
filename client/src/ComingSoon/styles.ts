@@ -1,21 +1,22 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { Theme } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles((theme) => ({
+export default makeStyles((theme: Theme) => ({
   container: {
     boxSizing: "border-box",
-    position: "relative",
+    position: "relative", 
     transition: "all 0.2s linear",
   },
   aligned: {
     maxWidth: "1200px",
-    marginLeft: "auto",
+    marginLeft: "auto", 
     marginRight: "auto",
   },
   title: {
     fontWeight: "normal",
     fontSize: "2rem",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center", 
     alignItems: "center",
     padding: "0.5rem",
     backgroundColor: "#09334F",
