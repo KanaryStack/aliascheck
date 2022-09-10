@@ -5,9 +5,9 @@ class Alias{
     
     public static async index(req: Request,res: Response): Promise<void>{
 
-        let client=new TwitterPlatform()
+        const client=new TwitterPlatform()
 
-        let username:string|undefined=req.query.username?.toString();
+        const username:string|undefined=req.query.username?.toString();
 
         if(username==undefined){
             res.json({
@@ -16,7 +16,7 @@ class Alias{
             })
         }
 
-        var twitterResponse=await client.checkUsernameExists(username??"")
+        const twitterResponse=await client.checkUsernameExists(username??"")
 
 
         res.json({
