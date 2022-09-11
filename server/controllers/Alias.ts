@@ -21,10 +21,10 @@ class Alias{
 
         res.json({
             username:username,
-            platforms:{
+            platforms:[{
                 platform:twitterResponse.platform,
-                exists:twitterResponse.exists            
-            }
+                exists:twitterResponse.exists           
+            }]
         })
     }
 }
