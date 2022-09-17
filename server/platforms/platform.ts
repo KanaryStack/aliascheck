@@ -5,7 +5,7 @@ export abstract class Platform{
         this.name=name        
     }
 
-    abstract  checkUsernameExists(username:string):Promise<IUsernameCheck>
+    abstract  checkUsernameExists(username:string):Promise<IUsernameCheck | undefined>
 }
 
 export interface IUsernameCheck{
