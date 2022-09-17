@@ -3,9 +3,6 @@ import { Platform,IUsernameCheck } from "../platform";
 import * as dotenv from 'dotenv';
 import { logger } from "../../app";
 
-dotenv.config();
-
-const TWITTER_BEARER_TOKEN:string|undefined=process.env.TWITTER_BEARER_TOKEN
 type YoutubeResponse = {
     "id": string,
     "kind": string,
