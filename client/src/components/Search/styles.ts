@@ -41,7 +41,7 @@ export default makeStyles((theme: Theme) => ({
       gap: "1rem",
       "& > span": {
         alignSelf: "auto",
-        marginTop: "0",
+        margin: "0",
       },
     },
   },

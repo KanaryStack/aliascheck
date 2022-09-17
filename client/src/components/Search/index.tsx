@@ -5,11 +5,11 @@ import useStyles from "./styles";
 const index = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <h3>search for username</h3>
       <SearchBox />
-      <span>see suggestion</span>
-    </div>
+      <span>See suggestion</span>
+    </section>
   );
 };
 
