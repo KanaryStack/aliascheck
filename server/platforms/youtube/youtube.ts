@@ -26,22 +26,45 @@ export class YoutubePlatform extends Platform{
         super("youtube")
     }
     async checkUsernameExists(username: string): Promise<IUsernameCheck | undefined> {
-        const config = {
+        const configId = {
             params:{
-                part: "contentDetails",
+                part: "id",
+                id: username,
+                key: process.env.YOUTUBE_API_KEY
+            }
+        };
+        const configUsername = {
+            params:{
+                part: "id",
                 forUsername: username,
                 key: process.env.YOUTUBE_API_KEY
             }
-          };
+        };
         const url = "https://www.googleapis.com/youtube/v3/channels"
         let check:IUsernameCheck | undefined;
 
         try{
+            //check if the channel exists by id
             const { data, status } = await axios.get<YoutubeResponse>(
-                url, config
+                url, configId
             )
-            check={ exists: data.pageInfo.totalResults > 0, platform:this.name }
-            logger.info("Youtube username %s was found", username);
+        
+            if (data.pageInfo.totalResults > 0){
+                check={ exists: data.pageInfo.totalResults > 0, platform:this.name }
+            }else{
+                //check if the channel exists by username
+                const { data, status } = await axios.get<YoutubeResponse>(
+                    url, configUsername
+                )
+                check={ exists: data.pageInfo.totalResults > 0, platform:this.name }
+            }
+
+            if (data.pageInfo.totalResults > 0){
+                logger.info("Youtube username %s was found", username);
+            }else{
+                logger.info("Youtube username %s was not found", username);
+            }
+        
         }catch(error){
             logger.error(error);
         }
