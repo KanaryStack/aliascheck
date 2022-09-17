@@ -9,17 +9,7 @@ type YoutubeResponse = {
     "pageInfo": {
         "totalResults": number,
         "resultsPerPage": number
-    },
-    "contentDetails": {
-      "relatedPlaylists": {
-        "likes": string,
-        "favorites": string,
-        "uploads": string,
-        "watchHistory": string,
-        "watchLater": string
-      },
-      "googlePlusUserId": string
-    },
+    }
 }
 export class YoutubePlatform extends Platform{
     constructor(){
@@ -51,17 +41,19 @@ export class YoutubePlatform extends Platform{
         
             if (data.pageInfo.totalResults > 0){
                 check={ exists: data.pageInfo.totalResults > 0, platform:this.name }
+                logger.info("Youtube channel %s was found", username);
             }else{
                 //check if the channel exists by username
                 const { data, status } = await axios.get<YoutubeResponse>(
                     url, configUsername
                 )
                 check={ exists: data.pageInfo.totalResults > 0, platform:this.name }
+                if (data.pageInfo.totalResults > 0){
+                    logger.info("Youtube username %s was found", username);
+                }
             }
 
-            if (data.pageInfo.totalResults > 0){
-                logger.info("Youtube username %s was found", username);
-            }else{
+            if (check.exists == false){
                 logger.info("Youtube username %s was not found", username);
             }
         
