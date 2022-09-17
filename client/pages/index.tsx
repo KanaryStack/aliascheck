@@ -1,7 +1,8 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import CommingSoon from "../src/components/ComingSoon/ComingSoon";
+import Search from "../src/components/Search";
+import { UserInfoProvider } from "../src/utils/userInfoContext";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +14,18 @@ const Home: NextPage = () => {
           content="Choose an Alias for any social platform before anyone"
         />
       </Head>
-      <CommingSoon />
+      {/**===============================================
+       *
+       * UserInfoProvider uses the contextAPI to provide access to
+       * state to all components
+       *
+       * All child elements needs to be wrapped with the
+       * [UseinfoProvider]
+       *
+       *  =====================================*/}
+      <UserInfoProvider>
+        <Search />
+      </UserInfoProvider>
     </>
   );
 };

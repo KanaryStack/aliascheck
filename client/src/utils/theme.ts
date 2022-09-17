@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 
-
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
     xs: true;
@@ -27,28 +26,24 @@ declare module "@mui/material/styles" {
   }
 }
 const theme = createTheme({
-  breakpoints:  { 
-    keys: [
-      "xs", 
-      "sm", 
-      "md", 
-      "lg", 
-      "xl"
-    ], 
-    values: { 
+  breakpoints: {
+    keys: ["xs", "sm", "md", "lg", "xl"],
+    values: {
       xs: 368,
       sm: 425,
       md: 601,
       lg: 769,
       xl: 1024,
-    } 
-  },    
+    },
+  },
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#FAB535",
+      contrastText: "#000",
     },
     secondary: {
-      main: "#19857b",
+      light: "rgba(0,0,0, 0.5)",
+      main: "rgb(0,0,0)",
     },
     error: {
       main: red.A400,
