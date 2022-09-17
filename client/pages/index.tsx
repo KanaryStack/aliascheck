@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import CommingSoon from "../src/ComingSoon/ComingSoon";
+import CommingSoon from "../src/components/ComingSoon/ComingSoon";
 
 const Home: NextPage = () => {
   return (
