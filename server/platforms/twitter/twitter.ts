@@ -1,6 +1,5 @@
 import { TwitterApi } from "twitter-api-v2";
 import { Platform,IUsernameCheck } from "../platform";
-import * as dotenv from 'dotenv';
 
 const TWITTER_BEARER_TOKEN:string|undefined=process.env.TWITTER_BEARER_TOKEN
 export class TwitterPlatform extends Platform{

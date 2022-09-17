@@ -1,6 +1,5 @@
 import axios  from "axios";
 import { Platform,IUsernameCheck } from "../platform";
-import * as dotenv from 'dotenv';
 import { logger } from "../../app";
 
 type YoutubeResponse = {
@@ -35,7 +34,7 @@ export class YoutubePlatform extends Platform{
             }
           };
         const url = "https://www.googleapis.com/youtube/v3/channels"
-        var check:IUsernameCheck | undefined;
+        let check:IUsernameCheck | undefined;
 
         try{
             const { data, status } = await axios.get<YoutubeResponse>(
