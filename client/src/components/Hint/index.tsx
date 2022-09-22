@@ -13,12 +13,13 @@ const hints = [
   },
   {
     id: 2,
-    icon: <MdOutlineContentCopy />,
+    icon: <MdOutlineCheck />,
+
     description: "Search if username is available",
   },
   {
     id: 3,
-    icon: <MdOutlineCheck />,
+    icon: <MdOutlineContentCopy />,
     description: "Copy available usernames",
   },
 ];

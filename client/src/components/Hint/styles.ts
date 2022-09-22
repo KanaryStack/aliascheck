@@ -37,6 +37,7 @@ export default makeStyles((theme: Theme) => ({
   hint: {
     display: "flex",
     justifyContent: "center",
+    fontWeight: 700,
     flexDirection: "column",
     alignItems: "center",
     padding: "1.5rem 1rem",
