@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Search from "../src/components/Search";
 import Hint from "../src/components/Hint";
+import Navbar from "../src/components/Navbar";
 import { UserInfoProvider } from "../src/utils/userInfoContext";
 
 const Home: NextPage = () => {
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
        *
        *  =====================================*/}
       <UserInfoProvider>
+        <Navbar />
         <Search />
         <Hint />
       </UserInfoProvider>
