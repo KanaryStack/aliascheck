@@ -9,8 +9,8 @@ export default makeStyles((theme: Theme) => ({
     width: "100%",
 
     "& > h3": {
-      textTransform: "capitalize",
-      padding: "0",
+      textTransform: "capitalize",  
+      padding: "0", 
       marign: "0",
     },
 

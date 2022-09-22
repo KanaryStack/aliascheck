@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Typography, Box, useMediaQuery } from "@mui/material";
 import useStyles from "./styles";
 import Image from "next/image";

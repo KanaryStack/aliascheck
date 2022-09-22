@@ -6,12 +6,12 @@ export default makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: "0.3rem",
-    width: "100%",
+    width: "100%", 
     maxWidth: "1200px",
 
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      justifyContent: "center",
+      justifyContent: "center",  
       alignItems: "center",
       gap: "1rem",
     },
