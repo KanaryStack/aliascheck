@@ -13,18 +13,18 @@ export default makeStyles((theme: Theme) => ({
       flexDirection: "row",
       justifyContent: "center",  
       alignItems: "center",
-      gap: "1rem",
+      gap: "1rem", 
     },
   },
 
   inputGroup: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    flexDirection: "column", 
+    alignItems: "center", 
 
     "& > input": {
       width: "99%",
-      padding: "0.6rem 1rem",
+      padding: "0.6rem 1rem", 
       outline: "0",
       border: "0",
       color: theme.palette.secondary.light,

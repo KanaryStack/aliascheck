@@ -1,7 +1,7 @@
 import SearchBox from "../SearchBox";
 import useStyles from "./styles";
 
-const index = () => {
+const index:React.FC = () => {
   const classes = useStyles();
   return (
     <section className={classes.container}>

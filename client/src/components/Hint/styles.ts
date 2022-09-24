@@ -9,17 +9,18 @@ export default makeStyles((theme: Theme) => ({
     width: "100%",
     gap: "2rem",
 
-    "& > h3": { 
-      textTransform: "capitalize",  
+    "& > h2": { 
+      // textTransform: "capitalize",  
       padding: "0", 
-      marign: "0",
+      marign: "0", 
       marginTop: "4rem",
+      fontWeight: 700,
     },
   },
 
   hintGroup: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column", 
     gap: "2rem",
 
     [theme.breakpoints.up("md")]: {

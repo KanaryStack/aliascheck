@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { useUserInfo } from "../../utils/userInfoContext";
 import useStyles from "./styles";
 
-const index = () => {
+const index: React.FC = () => {
   const classes = useStyles();
   const { setUsername } = useUserInfo();
 

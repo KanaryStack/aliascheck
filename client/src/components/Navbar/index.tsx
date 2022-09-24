@@ -1,17 +1,12 @@
 import useStyles from "./styles";
-import {
-  Toolbar,
-  Button,
-  Typography,
-  Box,
-} from "@mui/material";
+import { Toolbar, Button, Typography, Box } from "@mui/material";
 
 interface Props {
-  window?: () => Window;
+  window?: () => Window; 
 }
 const menuItems = ["Services", "FAQs"];
 
-const index = () => {
+const Navbar: React.FC = () => {
   const classes = useStyles();
   return (
     <>
@@ -41,4 +36,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;

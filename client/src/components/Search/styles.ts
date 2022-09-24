@@ -11,17 +11,17 @@ export default makeStyles((theme: Theme) => ({
     "& > h3": {
       textTransform: "capitalize",  
       padding: "0", 
-      marign: "0",
+      marign: "0", 
     },
 
     "& > span": {
       display: "inline-block",
-      marginTop: "1rem",
-      marginRight: "1rem",
+      marginTop: "1rem", 
+      marginRight: "1rem", 
       fontSize: "0.8rem",
       textDecoration: "underline",
       cursor: "pointer",
-      alignSelf: "flex-end",
+      alignSelf: "flex-end", 
     },
 
     "& > span:hover": {

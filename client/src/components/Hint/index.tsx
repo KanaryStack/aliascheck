@@ -24,11 +24,11 @@ const hints = [
   },
 ];
 
-const index = () => {
+const index: React.FC = () => {
   const classes = useStyles();
   return (
     <section className={classes.container}>
-      <h3>how it works</h3>
+      <h2>How it works</h2>
       <div className={classes.hintGroup}>
         {hints.map((hint) => (
           <div className={classes.hint} key={hint.id}>

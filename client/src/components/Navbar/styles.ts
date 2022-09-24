@@ -7,16 +7,16 @@ export default makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "100%",   
     maxWidth: "1200px",
-    margin: "auto",
+    margin: "auto", 
   },
   title: {
     fontWeight: 700,
     fontSize: "2.5rem", 
-    color: "#031521",
+    color: "#031521", 
     flexGrow: 1, 
     alignItems: "center",
     display: "flex",
-    margin: "0rem !important",
+    margin: "0rem !important", 
 
     [theme.breakpoints.up('md')]: {
       display: "inline-block",

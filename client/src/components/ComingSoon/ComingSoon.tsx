@@ -2,7 +2,7 @@ import { Typography, Box, useMediaQuery } from "@mui/material";
 import useStyles from "./styles";
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const classes = useStyles();
   const matches = useMediaQuery("(min-width:600px)");
 
