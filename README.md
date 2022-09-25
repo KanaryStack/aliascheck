@@ -70,3 +70,7 @@ From the root directory;
 npm run test
 ```
 
+### UI / UX Resources
+You may find some useful resources for improving the UI / UX of the app [here](https://www.figma.com/file/9KXFSDfZzIr9kaCEqpBsc5/Aliascheck%3A-Open-source?node-id=157%3A82).
+
+
