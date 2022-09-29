@@ -35,7 +35,4 @@ export default makeStyles((theme: Theme) => ({
       transform: "scale(0.9)",
     },         
   },
-  // btn: {
-  //   color: "#fff",
-  // }
 }));

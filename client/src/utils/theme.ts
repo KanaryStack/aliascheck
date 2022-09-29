@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
+import { PaletteOptions, createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
@@ -25,7 +25,7 @@ declare module "@mui/material/styles" {
     };
   }
 }
-const theme = createTheme({
+export const theme = createTheme({
   breakpoints: {
     keys: ["xs", "sm", "md", "lg", "xl"],
     values: {
@@ -42,7 +42,7 @@ const theme = createTheme({
       contrastText: "#000",
     },
     secondary: {
-      light: "rgba(0,0,0, 0.5)",
+      light: "rgba(0,0,0,0.5)",
       main: "rgb(0,0,0)",
     },
     error: {
@@ -50,4 +50,17 @@ const theme = createTheme({
     },
   },
 });
-export default theme;
+export const lightTheme = createTheme({
+  palette: {
+    primary: {main: "#FAB535",},
+    secondary: { main: "#09334F",}, 
+    mode: "light",
+  },
+});
+export const darkTheme = createTheme({
+   palette: {
+    primary: {main: "#FAB535",},
+    secondary: {   main: "#09334F",},
+    mode: "dark"
+  },
+});

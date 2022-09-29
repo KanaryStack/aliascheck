@@ -1,6 +1,7 @@
 import useStyles from "./styles";
 import { Toolbar, Button, Typography, Box } from "@mui/material";
 import Switcher from "../Switcher";
+
 interface Props {
   window?: () => Window;
 }
@@ -24,12 +25,8 @@ const Navbar: React.FC = () => {
             }}
           >
             {menuItems.map((item) => (
-              <Button
-                // className={classes.btn}
-                key={item}
-                sx={{ fontWeight: 700 }}
-              >
-                {item.toLowerCase()}
+              <Button key={item} sx={{ fontWeight: 700 }}>
+                {item}
               </Button>
             ))}
             <Button
