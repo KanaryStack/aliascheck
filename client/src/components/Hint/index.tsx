@@ -14,7 +14,6 @@ const hints = [
   {
     id: 2,
     icon: <MdOutlineCheck />,
-
     description: "Search if username is available",
   },
   {

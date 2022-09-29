@@ -8,17 +8,15 @@ export default makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "100%",
     gap: "2rem",
-
-    "& > h2": { 
+    "& > h2": {  
       // textTransform: "capitalize",  
       padding: "0", 
       marign: "0", 
-      marginTop: "4rem",
-      fontWeight: 700,
+      marginTop: "4rem", 
+      fontWeight: 700, 
     },
-  },
-
-  hintGroup: {
+  }, 
+  hintGroup: { 
     display: "flex",
     flexDirection: "column", 
     gap: "2rem",

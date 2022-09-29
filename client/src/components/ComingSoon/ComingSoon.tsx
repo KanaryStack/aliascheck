@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
       <Box className="classes.container">
         {matches && (
           <Box className={classes.top}>
-            <Image src="/top.png" alt="top" width={200} height={50} />
+            <Image src="/assets/top.png" alt="top" width={200} height={50} />
           </Box>
         )}
         <Box className={classes.aligned}>
@@ -44,7 +44,12 @@ const Navbar: React.FC = () => {
         </Box>
         {matches && (
           <Box className={classes.bottom}>
-            <Image src="/bottom.png" alt="bottom" width={200} height={100} />
+            <Image
+              src="/assets/bottom.png"
+              alt="bottom"
+              width={200}
+              height={100}
+            />
           </Box>
         )}
       </Box>
