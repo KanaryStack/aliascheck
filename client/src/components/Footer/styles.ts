@@ -1,19 +1,13 @@
 import { makeStyles } from "@mui/styles";
+import { Theme } from "@mui/material";
 
-export default makeStyles(() => ({
+export default makeStyles((theme: Theme) => ({
   text: {
-    marginTop: "2rem",    
+    marginTop: "1.5rem",   
     fontWeight: 700,
-    fontSize: "2rem",
-    justifyContent: "center",
+    fontSize: "1.5rem", 
+    justifyContent: "center", 
     display: "flex",
+
   },
-  footer: {
-  backgroundColor: "#FAB535",
-  }, 
-  copyright: {
-    flexGrow: 1,
-    justifyContent: "center",
-    display: "flex",
-  }
-}))
+})) 
