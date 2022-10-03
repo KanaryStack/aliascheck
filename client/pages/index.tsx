@@ -1,9 +1,18 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import CommingSoon from "../src/ComingSoon/ComingSoon";
+import Search from "../src/components/Search";
+import Hint from "../src/components/Hint";
+import Navbar from "../src/components/Navbar";
+import Footer from "../src/components/Footer";
+import { css } from "@emotion/react";
+import { UserInfoProvider } from "../src/utils/userInfoContext";
+// import { useTheme } from "next-themes";
+// import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { Button } from "@mui/material";
 
 const Home: NextPage = () => {
+  // const { theme, resolvedTheme, setTheme } = useTheme();
   return (
     <>
       <Head>
@@ -13,7 +22,21 @@ const Home: NextPage = () => {
           content="Choose an Alias for any social platform before anyone"
         />
       </Head>
-      <CommingSoon />
+      {/**===============================================
+       *
+       * UserInfoProvider uses the contextAPI to provide access to
+       * state to all components
+       *
+       * All child elements needs to be wrapped with the
+       * [UseinfoProvider]
+       *
+       *  =====================================*/}
+      <UserInfoProvider>
+        <Navbar />
+        <Search />
+        <Hint />
+        <Footer />
+      </UserInfoProvider>
     </>
   );
 };
