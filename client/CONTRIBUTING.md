@@ -10,6 +10,7 @@ Below are set of guidelines for contributing to AliasCheck and its packages. The
 - <a href="#contributing">How to Contribute</a>
 - <a href="#proposeIssue">How to Propose A New Issue</a>
 - <a href="#PRGuides">Pull Request Guides</a>
+- <a href="#forkrepo">Fork a Repository - Step by Step</a>
 
 ---
 
@@ -69,10 +70,84 @@ This guide is for both first time contributors and previous contributors.
 - Check the Preview tab to make sure the Markdown is correctly rendered and that all tags and references are linked. If not, go back and edit the Markdown.
 
 - Once your PR is ready, remove the <i><strong>[WIP]</strong></i> from the title and/or change it from a draft PR to a regular PR.
-- If a specific reviewer is not assigned automatically, please request a review from the project maintainer @simplytunde and any other interested parties manually (Backend - @ChubaOraka, @KiptoonKipkurui; Frontend - @RWambui, @Maxwell-ihiaso)
+- If a specific reviewer is not assigned automatically, please request a review from the project maintainer [@simplytunde](https://github.com/simplytunde) and any other interested parties manually 
+
+Backend - [@ChubaOraka](https://github.com/ChubaOraka), [@KiptoonKipkurui](https://github.com/KiptoonKipkurui) 
+
+Frontend - [@Maxwell-ihiaso](https://github.com/Maxwell-ihiaso), [@RWambui](https://github.com/RWambui) 
 
 ---
 
 - If your PR gets a 'Changes requested' review, you will need to address the feedback and update your PR by pushing to the same branch. You don't need to close the PR and open a new one.
 - Be sure to re-request review once you have made changes after a code review.
 - Asking for a re-review makes it clear that you addressed the changes that were requested and that it's waiting on the maintainers instead of the other way round.
+
+## <b id="forkrepo">Fork a Repository</b>
+
+**Guide to get started with forking a repository** 
+1. On the [Github page for this repository](https://github.com/KanaryStack/aliascheck), click on "Fork" 
+
+<img width="350"  src="./public/assets/1st-preview.png"/>
+
+<br>
+
+2. Clone your forked repository to your computer:
+
+<img align="center" width="350" src="./public/assets/preview3.png"/>
+
+✅run this command inside your terminal:
+```
+git clone https://github.com/KanaryStack/aliascheck.git
+```
+see more about [forking]() and [cloning a repo]()
+
+3. Shift to project directory:
+
+```
+cd aliascheck/client
+```
+
+4. Before making any changes, keep your forked repository in sync to avoid merge conflicts:
+
+```
+git remote add upstream https://github.com/KanaryStack/aliascheck.git
+git pull upstream main
+```
+  
+If you run into a merge conflict, you have to resolve the conflict. You can find online guides [here](https://opensource.com/article/20/4/git-merge-conflict)
+
+5. after adding the upstream and checking that all files are up to date, you can now create a new branch before editing any files. You can achieve that in two ways:
+
+```
+git checkout -b <branch-name>
+```
+
+```
+git branch <name-of-your-branch>
+git switch <name-of-your-branch>
+```
+
+6. On your directory, open text editor and add your changes/components
+
+7. Add the changes with git add, git commit ([write a good commit message](https://cbea.ms/git-commit/));
+
+```
+git add src/hero/index.tsx
+git commit -m "updated hero component"
+```
+
+8. Push your changes to your repository:
+
+```
+git push origin <your-branch-name>
+```
+
+9. Go to the Github page of your fork, and make a pull request: 
+
+If you want to see more on the [pull request pages](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+
+10. Wait for one of the maintainers to merge your pull request. If you experience any conflict, you will be alerted.
+
+11. Don't be shy and enjoy creating things together! 
+
+
