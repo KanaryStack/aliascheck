@@ -40,7 +40,7 @@ Once you've found an issue you'd like to work on, please follow these steps to m
 
 > We encourage people to collaborate as much as possible. When you reviewing each other pull requests be kind and constructive. We especially appreciate contributors reviewing each others pull requests.
 
-## <b href="proposeIssue">How to Propose A New Issue</b>
+## <b id="proposeIssue">How to Propose A New Issue</b>
 
 If you want to work on something that there is no GitHub issue for, kindly follow these steps:
 
