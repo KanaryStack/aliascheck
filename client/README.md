@@ -1,3 +1,5 @@
+### Please see the [CONTIBUTING.md](./CONTRIBUTING.md) if you would like to contribute to this Repo
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
