@@ -14,17 +14,23 @@ class Alias{
                 description:"The parameter username is missing."
             })
         }
-        const platforms: (IUsernameCheck | undefined)[] = [];
-        if (process.env.TWITTER_BEARER_TOKEN) platforms.push(await this.twitter(username))
-        if (process.env.YOUTUBE_API_KEY) platforms.push(await Alias.youtube(username))
 
+        //add all results to an array to run them in parallel
+        const requests=[];
+        if (process.env.TWITTER_BEARER_TOKEN) requests.push(Alias.twitter(username))
+        if (process.env.YOUTUBE_API_KEY) requests.push(Alias.youtube(username))
+
+       const platforms= (await Promise.allSettled(requests))
+                            .filter((x): x is PromiseFulfilledResult<IUsernameCheck|undefined>=>x.status=='fulfilled')
+                            .map(x=>x.value)    
+                            .filter(f=>f) 
         res.json({
             "username": username,
             "platforms": platforms
         })
 
     }
-    public static async twitter(username: string | undefined): Promise<IUsernameCheck>{
+    public static async twitter(username: string | undefined): Promise<IUsernameCheck|undefined>{
         const client=new TwitterPlatform()
 
         return await client.checkUsernameExists(username??"")
