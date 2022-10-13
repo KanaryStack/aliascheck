@@ -10,6 +10,7 @@ import { UserInfoProvider } from "../src/utils/userInfoContext";
 // import { useTheme } from "next-themes";
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { Button } from "@mui/material";
+import Intro from "../src/components/intro/Intro";
 
 const Home: NextPage = () => {
   // const { theme, resolvedTheme, setTheme } = useTheme();
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
        *  =====================================*/}
       <UserInfoProvider>
         <Navbar />
+        <Intro />
         <Search />
         <Hint />
         <Footer />
