@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+You are welcome to contribute to [Aliascheck](https://github.com/KanaryStack/aliascheck). Please see [`Guidelines`](./CONTRIBUTING.md) on how to contibute. We are so happy you found yourself here!
+
 ## Getting Started
 
 First, run the development server:
