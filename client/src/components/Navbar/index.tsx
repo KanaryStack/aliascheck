@@ -1,11 +1,11 @@
 import useStyles from "./styles";
 import { Toolbar, Button, Typography, Box } from "@mui/material";
 import Switcher from "../Switcher";
+import Link from "next/link";
 
 interface Props {
   window?: () => Window;
 }
-const menuItems = ["Services", "FAQs"];
 
 const Navbar: React.FC = () => {
   const classes = useStyles();
@@ -20,22 +20,21 @@ const Navbar: React.FC = () => {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", sm: "block" },
+              display: "flex",
               flex: 0.5,
             }}
           >
-            {menuItems.map((item) => (
-              <Button key={item} sx={{ fontWeight: 700 }}>
-                {item}
+            <Box className={classes.menuItems} sx={{}}>
+              <Link href="/services">
+                <Typography className={classes.items}>Services</Typography>
+              </Link>
+              <Link href="/faqs">
+                <Typography className={classes.items}>FAQs</Typography>
+              </Link>
+              <Button className={classes.button} variant="contained">
+                Sign Up
               </Button>
-            ))}
-            <Button
-              className={classes.button}
-              variant="contained"
-              sx={{ textTransform: "none" }}
-            >
-              Sign Up
-            </Button>
+            </Box>
           </Box>
           <Box>
             <Switcher />
