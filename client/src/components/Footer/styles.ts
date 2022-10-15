@@ -17,7 +17,7 @@ text: {
   },
 
 logoText: {
-  fontWeight: 900, 
+  fontWeight: 700, 
   fontSize: "1.8rem", 
   color: "#09334F"
   },
@@ -34,9 +34,9 @@ newsLetter: {
   fontWeight: 700, color: "#09334F"
 },
 
-emailInput: {
+textField: {
   width: "44%",
-  padding: ".5rem 2rem",
+  padding: ".2rem 1.5rem",
   margin: ".1rem 0",
   boxSizing: "border-box",
   backgroundColor: "#fff",
@@ -50,7 +50,7 @@ emailInput: {
   },
 
 submitButton: {
-    padding: "0.6rem 1.2rem",
+    padding: "0.4rem 1.3rem",
     width: "max-content",
     textTransform: "capitalize",
     marginLeft: "2rem",
@@ -72,17 +72,16 @@ content: {
   paddingBottom: "2rem",
 },
 copyright: {
-    // fontWeight: "bold",
     fontSize: ".9rem",
     marginLeft: "6rem",
     color: "#09334F",
     paddimgTop: "2rem",
   },
-policies : {
+links : {
     display: "flex",
     justifyContent: "space-between",
     color: "#09334F",
-    width: "12%",
+    width: "14%",
     marginRight: "8rem",
 }
 })) 

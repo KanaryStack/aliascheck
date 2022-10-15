@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                   <Input
                     type="email"
                     placeholder="johndoe@shuffle.dev"
-                    className={classes.emailInput}
+                    className={classes.textField}
                   />
                   <Button variant="contained" className={classes.submitButton}>
                     Subscribe
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                 &copy; {new Date().getFullYear()} Flex. All rights reserved.
               </Typography>
             </Box>
-            <Box className={classes.policies}>
+            <Box className={classes.links}>
               <Link href="/terms">
                 <Typography>Terms</Typography>
               </Link>

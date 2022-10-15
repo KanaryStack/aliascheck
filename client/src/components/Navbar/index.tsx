@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const classes = useStyles();
   return (
     <>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", marginBottom: "1.5rem" }}>
         <Toolbar className={classes.container}>
           <Box sx={{ display: "flex", flex: 2 }}>
             <Typography variant="h1" className={classes.title} component="div">

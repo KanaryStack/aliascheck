@@ -9,10 +9,11 @@ export default makeStyles((theme: Theme) => ({
     maxWidth: "90%",
     margin: "auto", 
     paddingTop: "2rem",
+
   },
   title: {
     fontWeight: 700,  
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     alignItems: "center", 
     margin: "0rem !important", 
 
@@ -35,17 +36,17 @@ export default makeStyles((theme: Theme) => ({
     width: "100%",
   },
   items: {
-    fontWeight: "900",
-    fontSize: "1.2rem",
+    fontWeight: "700",
+    fontSize: "1rem",
     textTransform: "capitalize",
     marginRight: "0.5rem",
   },
   button: {
     textTransform: "none",
     fontWeight: "700",
-    padding: ".1rem 1rem",
+    padding: ".2rem 1rem",
     margin: ".1rem 0",
-    fontSize: "1.2rem",
+    fontSize: "1rem",
     "&:hover": {
       transform: "scale(0.9)",
     },         
