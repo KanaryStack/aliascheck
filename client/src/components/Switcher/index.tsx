@@ -2,7 +2,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
 import { Box } from "@mui/material";
 
-const index = () => {
+const Switcher = () => {
   const { theme, resolvedTheme, setTheme } = useTheme();
   return (
     <Box sx={{ marginLeft: "4rem" }}>
@@ -17,4 +17,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Switcher;
