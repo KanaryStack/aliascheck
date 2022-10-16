@@ -5,11 +5,9 @@ import Search from "../src/components/Search";
 import Hint from "../src/components/Hint";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
-import { css } from "@emotion/react";
 import { UserInfoProvider } from "../src/utils/userInfoContext";
 // import { useTheme } from "next-themes";
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
-import { Button } from "@mui/material";
 import Intro from "../src/components/intro/Intro";
 
 const Home: NextPage = () => {

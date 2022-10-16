@@ -3,9 +3,9 @@ import { Toolbar, Button, Typography, Box } from "@mui/material";
 import Switcher from "../Switcher";
 import Link from "next/link";
 
-interface Props {
-  window?: () => Window;
-}
+// interface Props {
+//   window?: () => Window;
+// }
 
 const Navbar: React.FC = () => {
   const classes = useStyles();

@@ -23,7 +23,7 @@ const hints = [
   },
 ];
 
-const index: React.FC = () => {
+const Hint: React.FC = () => {
   const classes = useStyles();
   return (
     <section className={classes.container}>
@@ -40,4 +40,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Hint;

@@ -1,7 +1,7 @@
 import SearchBox from "../Search/SearchBox";
 import useStyles from "./styles";
 
-const index: React.FC = () => {
+const Search: React.FC = () => {
   const classes = useStyles();
   return (
     <section className={classes.container}>
@@ -12,4 +12,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Search;

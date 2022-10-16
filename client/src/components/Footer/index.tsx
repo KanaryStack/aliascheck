@@ -1,5 +1,5 @@
 import useStyles from "./styles";
-import { Typography, Box, Container, Button, Grid, Input } from "@mui/material";
+import { Typography, Box, Button, Grid, Input } from "@mui/material";
 import Link from "next/link";
 
 const Footer: React.FC = () => {

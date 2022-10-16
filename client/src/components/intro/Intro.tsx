@@ -7,9 +7,9 @@ import useStyles from "./styles";
 
 function Intro() {
   const theme = useTheme();
-  console.log(theme.palette.mode);
+  // console.log(theme.palette.mode);
   const background = theme.palette.background;
-  console.log(background);
+  // console.log(background);
 
   const classes = useStyles();
   return (

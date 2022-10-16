@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { FC } from "react";
 import { AppProps } from "next/app";
 import PageProvider from "../src/utils/PageProvider";
 import CssBaseline from "@mui/material/CssBaseline";

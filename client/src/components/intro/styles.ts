@@ -1,11 +1,11 @@
-import { Theme } from "@mui/material";
+// import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const top_margin = 10,
   width = "75%",
   height = "90%",
   border = "3px dashed #666";
-export default makeStyles((theme: Theme) => ({
+export default makeStyles(() => ({
   container: {
     borderBottom: "1px solid black",
     position: "relative",

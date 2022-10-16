@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { useUserInfo } from "../../../utils/userInfoContext";
 import useStyles from "./styles";
 
-const index: React.FC = () => {
+const SearchBox: React.FC = () => {
   const classes = useStyles();
   const { setUsername } = useUserInfo();
 
@@ -26,4 +26,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default SearchBox;
