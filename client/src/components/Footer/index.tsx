@@ -1,52 +1,73 @@
 import useStyles from "./styles";
-import { Paper, Typography, Box, Container } from "@mui/material";
+import { Typography, Box, Container, Button, Grid, Input } from "@mui/material";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer: React.FC = () => {
   const classes = useStyles();
-  const faPropIcon = faGithub as IconProp;
   return (
     <>
-      <Paper
-        sx={{
-          width: "100%",
-          position: "fixed",
-          bottom: 0,
-          backgroundColor: "#fab535",
-        }}
-      >
-        <Box bgcolor="primary">
-          <Box>
-            <Link href="/">
-              <Typography className={classes.text}>Aliascheck</Typography>
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
-              justifyContent: "center",
-              display: "flex",
-              my: 2,
-              color: "#000",
-            }}
-          >
-            <Link href="https://github.com/KanaryStack/aliascheck" passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faPropIcon} />
-              </a>
-            </Link>
-            <Typography
-              variant="caption"
-              sx={{ fontWeight: "bold", marginLeft: "0.5rem" }}
+      <Box className={classes.footer}>
+        <Grid borderColor="#404F65" borderBottom={1}>
+          <Box className={classes.text}>
+            <Box sx={{ flex: 0.5 }}>
+              <Box className={classes.logoText}>Aliascheck</Box>
+              <Box>
+                <Box className={classes.listItems}>
+                  <Link href="/services" color="inherit">
+                    <Typography>Services</Typography>
+                  </Link>
+                  <Link href="/faqs" color="inherit">
+                    <Typography>FAQs</Typography>
+                  </Link>
+                  <Link href="/signup" color="inherit">
+                    <Typography>Sign up</Typography>
+                  </Link>
+                </Box>
+              </Box>
+            </Box>
+            <Grid
+              sx={{
+                width: "36%",
+                marginRight: "0.2rem",
+              }}
             >
-              Copyright&copy; {new Date().getFullYear()}
-            </Typography>
+              <Box className={classes.newsLetter}>Newsletter</Box>
+              <Box sx={{ diplay: "flex" }}>
+                <Box>
+                  <Input
+                    type="email"
+                    placeholder="johndoe@shuffle.dev"
+                    className={classes.textField}
+                  />
+                  <Button variant="contained" className={classes.submitButton}>
+                    Subscribe
+                  </Button>
+                </Box>
+              </Box>
+            </Grid>
           </Box>
-        </Box>
-      </Paper>
+        </Grid>
+        <Grid sx={{}}>
+          <Grid className={classes.content}>
+            <Box>
+              <Typography variant="caption" className={classes.copyright}>
+                &copy; {new Date().getFullYear()} Flex. All rights reserved.
+              </Typography>
+            </Box>
+            <Box className={classes.links}>
+              <Link href="/terms">
+                <Typography>Terms</Typography>
+              </Link>
+              <Link href="/privacy">
+                <Typography>Privacy</Typography>
+              </Link>
+              <Link href="/cookies">
+                <Typography>Cookies</Typography>
+              </Link>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

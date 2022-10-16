@@ -6,13 +6,14 @@ export default makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
     width: "100%",
-    maxWidth: "1300px",
-    margin: "auto",
-    paddingTop: "1rem",
+    maxWidth: "90%",
+    margin: "auto", 
+    paddingTop: "2rem",
+
   },
   title: {
     fontWeight: 700,  
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     alignItems: "center", 
     margin: "0rem !important", 
 
@@ -29,8 +30,23 @@ export default makeStyles((theme: Theme) => ({
   grow: {
     flexGrow: 1,
   }, 
-  menuItems: {},
+  menuItems: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  items: {
+    fontWeight: "700",
+    fontSize: "1rem",
+    textTransform: "capitalize",
+    marginRight: "0.5rem",
+  },
   button: {
+    textTransform: "none",
+    fontWeight: "700",
+    padding: ".2rem 1rem",
+    margin: ".1rem 0",
+    fontSize: "1rem",
     "&:hover": {
       transform: "scale(0.9)",
     },         
