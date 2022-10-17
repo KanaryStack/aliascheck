@@ -30,12 +30,12 @@ export default makeStyles(() => ({
     marginTop: "1rem",
   },
 
-  newsLetter: {
+  inputHeader: {
     fontWeight: 700,
     color: "#09334F",
   },
 
-  textField: {
+  inputLabel: {
     width: "44%",
     padding: ".2rem 1.5rem",
     margin: ".1rem 0",

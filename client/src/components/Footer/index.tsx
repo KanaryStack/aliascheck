@@ -31,13 +31,13 @@ const Footer: React.FC = () => {
                 marginRight: "0.2rem",
               }}
             >
-              <Box className={classes.newsLetter}>Newsletter</Box>
+              <Box className={classes.inputHeader}>Newsletter</Box>
               <Box sx={{ diplay: "flex" }}>
                 <Box>
                   <Input
                     type="email"
                     placeholder="johndoe@shuffle.dev"
-                    className={classes.textField}
+                    className={classes.inputLabel}
                   />
                   <Button variant="contained" className={classes.submitButton}>
                     Subscribe
