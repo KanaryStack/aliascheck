@@ -2,6 +2,7 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Search from "../src/components/Search";
+import SearchResult from '../src/components/SearchResult/index';
 import Hint from "../src/components/Hint";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Intro />
         <Search />
+        <SearchResult />
         <Hint />
         <Footer />
       </UserInfoProvider>
