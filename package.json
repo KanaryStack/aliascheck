@@ -3,22 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tsc --project './tsconfig.json' --watch & nodemon dist/server.js",
+    "dev": "tsc --project './tsconfig.json' --watch & ts-node server/server.ts",
     "build": "tsc --project './tsconfig.build.json'",
-    "start": "nodemon dist/server.js",
+    "start": "ts-node server/server.ts",
     "lint": "eslint . --ext .ts",
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "http-status-codes": "^2.2.0",
+    "i": "^0.3.7",
+    "twitter-api-v2": "^1.12.5",
     "winston": "^3.8.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.7",
     "@types/node": "^18.0.0",
+    "@types/passport": "^1.0.11",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "@types/supertest": "^2.0.12",
