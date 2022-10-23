@@ -48,11 +48,6 @@ You should now be able to see the frontend at [http://localhost:3000/](http://lo
 
 
 ## **Backend**
-The backend requires authorization keys from the social media platforms that we support and will increase as time goes by:
-
-- For twitter :Register for a twitter developer account at [twitter developer account](https://developer.twitter.com/) then create api keys. Of importance is the `Bearer Token` to which on our .env file populate the key `TWITTER_BEARER_TOKEN`
-
-
 To start the backend application, make sure you have typescript installed on your system. Checkout [https://www.typescriptlang.org/download](https://www.typescriptlang.org/download). Once installed, run;
 ```bash
 cp .env.sample .env
@@ -69,8 +64,4 @@ From the root directory;
 ```sh
 npm run test
 ```
-
-### UI / UX Resources
-You may find some useful resources for improving the UI / UX of the app [here](https://www.figma.com/file/9KXFSDfZzIr9kaCEqpBsc5/Aliascheck%3A-Open-source?node-id=157%3A82).
-
 
