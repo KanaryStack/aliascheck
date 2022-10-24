@@ -3,16 +3,16 @@ import { Toolbar, Button, Typography, Box } from "@mui/material";
 import Switcher from "../Switcher";
 import Link from "next/link";
 
-// interface Props {
-//   window?: () => Window;
-// }
+interface Props {
+  window?: () => Window;
+}
 
 const Navbar: React.FC = () => {
   const classes = useStyles();
   return (
     <>
-      <Box sx={{ display: "flex", marginBottom: "1.5rem" }}>
-        <Toolbar className={classes.container}>
+      <Box sx={{ display: "flex", marginBottom: "0.5rem" }}>
+        <Box className={classes.container}>
           <Box sx={{ display: "flex", flex: 2 }}>
             <Typography variant="h1" className={classes.title} component="div">
               Aliascheck
@@ -31,15 +31,15 @@ const Navbar: React.FC = () => {
               <Link href="/faqs">
                 <Typography className={classes.items}>FAQs</Typography>
               </Link>
-              <Button className={classes.button} variant="contained">
-                Sign Up
-              </Button>
+              <Link href="/signup">
+                <button className={classes.button}>Sign up</button>
+              </Link>
             </Box>
           </Box>
-          <Box>
+          {/* <Box>
             <Switcher />
-          </Box>
-        </Toolbar>
+          </Box> */}
+        </Box>
       </Box>
     </>
   );

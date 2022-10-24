@@ -8,7 +8,7 @@ export default makeStyles((theme: Theme) => ({
     width: "100%",
     maxWidth: "90%",
     margin: "auto", 
-    paddingTop: "2rem",
+    paddingTop: "1rem",
 
   },
   title: {
@@ -37,18 +37,20 @@ export default makeStyles((theme: Theme) => ({
   },
   items: {
     fontWeight: "700",
-    fontSize: "1rem",
     textTransform: "capitalize",
-    marginRight: "0.5rem",
-  },
+  },  
   button: {
-    textTransform: "none",
+    padding: "0.2rem 1rem",
     fontWeight: "700",
-    padding: ".2rem 1rem",
-    margin: ".1rem 0",
     fontSize: "1rem",
+    color: theme.palette.primary.contrastText,
+    background: theme.palette.primary.main,
+    border: 0,
+    borderRadius: "2px",
+    cursor: "pointer",
     "&:hover": {
       transform: "scale(0.9)",
-    },         
+      transition: "all 0.3s ease",
+    },        
   },
 }));

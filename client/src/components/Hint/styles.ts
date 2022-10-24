@@ -15,7 +15,7 @@ export default makeStyles((theme: Theme) => ({
       marginTop: "4rem",
       fontWeight: 700,
     },
-    marginBottom: "10rem",
+    marginBottom: "2rem",
   },
   hintGroup: {
     display: "flex",

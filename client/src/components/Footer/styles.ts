@@ -5,7 +5,7 @@ export default makeStyles(() => ({
   footer: {
     width: "100%",
     backgroundColor: "#FAB535",
-    marginTop: "calc(10% + 2rem)",
+    // marginTop: "calc(10% + 2rem)",
   },
 
   text: {
