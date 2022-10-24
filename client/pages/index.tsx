@@ -2,11 +2,10 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Search from "../src/components/Search";
-import SearchResult from '../src/components/SearchResult/index';
 import Hint from "../src/components/Hint";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
-import SearchResult from "../src/components/SearchResult"
+import SearchResult from "../src/components/SearchResult";
 import { UserInfoProvider } from "../src/utils/userInfoContext";
 // import { useTheme } from "next-themes";
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
