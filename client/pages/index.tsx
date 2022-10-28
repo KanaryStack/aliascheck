@@ -5,6 +5,7 @@ import Search from "../src/components/Search";
 import Hint from "../src/components/Hint";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
+import SearchResult from "../src/components/SearchResult";
 import { UserInfoProvider } from "../src/utils/userInfoContext";
 // import { useTheme } from "next-themes";
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Intro />
         <Search />
+        <SearchResult />
         <Hint />
         <Footer />
       </UserInfoProvider>

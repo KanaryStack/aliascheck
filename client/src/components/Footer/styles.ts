@@ -5,7 +5,7 @@ export default makeStyles(() => ({
   footer: {
     width: "100%",
     backgroundColor: "#FAB535",
-    marginTop: "calc(10% + 2rem)",
+    // marginTop: "calc(10% + 2rem)",
   },
 
   text: {
@@ -30,12 +30,12 @@ export default makeStyles(() => ({
     marginTop: "1rem",
   },
 
-  newsLetter: {
+  inputHeader: {
     fontWeight: 700,
     color: "#09334F",
   },
 
-  textField: {
+  inputLabel: {
     width: "44%",
     padding: ".2rem 1.5rem",
     margin: ".1rem 0",

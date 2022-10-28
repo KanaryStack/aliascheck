@@ -1,5 +1,5 @@
 import useStyles from "./styles";
-import { Typography, Box, Button, Grid, Input } from "@mui/material";
+import { Typography, Box, Button, Grid, Input, Divider } from "@mui/material";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
@@ -7,7 +7,10 @@ const Footer: React.FC = () => {
   return (
     <>
       <Box className={classes.footer}>
-        <Grid borderColor="#404F65" borderBottom={1}>
+        <Grid
+        // borderColor="#404F65"
+        // borderBottom={0.1}
+        >
           <Box className={classes.text}>
             <Box sx={{ flex: 0.5 }}>
               <Box className={classes.logoText}>Aliascheck</Box>
@@ -31,13 +34,13 @@ const Footer: React.FC = () => {
                 marginRight: "0.2rem",
               }}
             >
-              <Box className={classes.newsLetter}>Newsletter</Box>
+              <Box className={classes.inputHeader}>Newsletter</Box>
               <Box sx={{ diplay: "flex" }}>
                 <Box>
                   <Input
                     type="email"
                     placeholder="johndoe@shuffle.dev"
-                    className={classes.textField}
+                    className={classes.inputLabel}
                   />
                   <Button variant="contained" className={classes.submitButton}>
                     Subscribe
@@ -47,6 +50,7 @@ const Footer: React.FC = () => {
             </Grid>
           </Box>
         </Grid>
+        <Divider sx={{ color: "#404F65" }} />
         <Grid sx={{}}>
           <Grid className={classes.content}>
             <Box>
