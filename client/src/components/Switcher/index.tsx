@@ -9,7 +9,7 @@ const Switcher = () => {
       <DarkModeSwitch
         checked={theme === "light"}
         onChange={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
-        size={36}
+        size={20}
         moonColor="#09334F"
         sunColor="#FAB535"
       />
