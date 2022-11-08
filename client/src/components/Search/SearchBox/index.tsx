@@ -18,7 +18,7 @@ const SearchBox: React.FC = () => {
         />
         <p>
           By using our service you accept our Terms of Service and Privacy
-          Policy
+          Policy.
         </p>
       </div>
       <button className={classes.button}>search</button>

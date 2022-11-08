@@ -43,24 +43,12 @@ export default makeStyles((theme: Theme) => ({
       textAlign: "center",
     },
 
-    [theme.breakpoints.up("xs")]: {
+     [theme.breakpoints.down(769)]: {
       "& > input": {
-        width: "95%",
+        width: "75%",
       },
     },
-
-    [theme.breakpoints.up("sm")]: {
-      "& > p": {
-        fontSize: "0.7rem",
-      },
-    },
-
-    [theme.breakpoints.up("md")]: {
-      "& > input": {
-        width: "90%",
-      },
-    },
-
+   
     /**============== TABLET ================ */
     [theme.breakpoints.up("lg")]: {
       width: "60%",

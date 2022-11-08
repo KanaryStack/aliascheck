@@ -7,7 +7,6 @@ const Search: React.FC = () => {
     <section className={classes.container}>
       <h3>search for username</h3>
       <SearchBox />
-      <span>See suggestion</span>
     </section>
   );
 };
