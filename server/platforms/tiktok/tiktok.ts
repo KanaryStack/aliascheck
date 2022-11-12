@@ -12,9 +12,7 @@ export class TikTokPlatform extends Platform{
         let check:IUsernameCheck | undefined;
 
         try{
-            const TikTokScraper = new TTScraper();
-
-           
+            const TikTokScraper = new TTScraper();   
             const response = await TikTokScraper.user(username);
             logger.info(response)
             check={ exists: response!=null, platform:this.name }
