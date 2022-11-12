@@ -15,7 +15,7 @@ function Intro() {
         <Box className={classes.outerBox_content} sx={{ px: 8}}>
           <Typography variant="h1" className={classes.hero} sx={{ m: 1 }}>
             Finding unique usernames is
-            <span className={classes.hero_fun}>fun</span> with{" "}
+            <span className={classes.hero_fun}>@fun</span> with{" "}
             <span style={{ fontWeight: "bolder" }}>Aliascheck</span>
           </Typography>
           <Typography className={classes.hero_article}  sx={{ textAlign: "center" }}>

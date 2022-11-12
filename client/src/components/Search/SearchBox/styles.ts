@@ -5,9 +5,10 @@ export default makeStyles((theme: Theme) => ({
   container: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     gap: "0.3rem",
-    width: "100%", 
-    maxWidth: "1200px",
+    width: "80%", 
+    maxWidth: "1600px",
 
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
@@ -15,6 +16,7 @@ export default makeStyles((theme: Theme) => ({
       alignItems: "center",
       gap: "1rem", 
     },
+
   },
 
   inputGroup: {
@@ -23,7 +25,6 @@ export default makeStyles((theme: Theme) => ({
     alignItems: "center", 
 
     "& > input": {
-      width: "99%",
       padding: "0.6rem 1rem", 
       outline: "0",
       border: "0",
@@ -42,25 +43,17 @@ export default makeStyles((theme: Theme) => ({
       fontSize: "0.6rem",
       textAlign: "center",
     },
-
     [theme.breakpoints.up("xs")]: {
       "& > input": {
-        width: "95%",
+        width: "98%",
       },
     },
-
-    [theme.breakpoints.up("sm")]: {
-      "& > p": {
-        fontSize: "0.7rem",
-      },
-    },
-
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("xl")]: {
       "& > input": {
-        width: "90%",
+        width: "99%",
       },
     },
-
+   
     /**============== TABLET ================ */
     [theme.breakpoints.up("lg")]: {
       width: "60%",

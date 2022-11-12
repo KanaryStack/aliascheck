@@ -108,10 +108,6 @@ export default makeStyles((theme:Theme ) => ({
     [theme.breakpoints.down(365)]:{
       paddingTop: "0.15rem",
     }, 
-
-
-
-
   },
   hero_fun: {
     color: "#FAB535",
