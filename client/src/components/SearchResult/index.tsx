@@ -57,16 +57,13 @@ const searchResult: React.FC = () => {
     <section className={classes.container}>
       <Container maxWidth="xl">
         <Typography
-          sx={{ margin: 2, textAlign: "center", fontSize: 20, lineHeight: 2 }}
+          sx={{ margin: 2, paddingTop: 2, textAlign: "center", fontSize: 20, lineHeight: 2 }}
         >
           Results
         </Typography>
-        <Box
+        <Box className={classes.socialhandles}
           sx={{
-            p: 2,
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 2,
+            gap: 2.75,
           }}
         >
           {socials.map((social) => (
@@ -98,9 +95,9 @@ const searchResult: React.FC = () => {
         </Box>
 
         <Typography
-          sx={{ marginTop: 5, textAlign: "center", fontWeight: "bold" }}
+          sx={{ marginTop: 5,  marginLeft: 3, textAlign: "center", fontWeight: "bold" }}
         >
-          More personalized options ?{" "}
+          More personalized options?{" "}
           <span className={classes.span}>See suggestion</span>
         </Typography>
       </Container>
