@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import {TwitterPlatform} from '../platforms/twitter/twitter'
 import {YoutubePlatform} from "../platforms/youtube/youtube"
 import { IUsernameCheck } from "../platforms/platform";
+import {TikTokPlatform} from '../platforms/tiktok/tiktok'
 
 class Alias{
     
@@ -19,8 +20,8 @@ class Alias{
         const requests=[];
         if (process.env.TWITTER_BEARER_TOKEN) requests.push(Alias.twitter(username))
         if (process.env.YOUTUBE_API_KEY) requests.push(Alias.youtube(username))
-
-       const platforms= (await Promise.allSettled(requests))
+        requests.push(Alias.tiktok(username))
+        const platforms= (await Promise.allSettled(requests))
                             .filter((x): x is PromiseFulfilledResult<IUsernameCheck|undefined>=>x.status=='fulfilled')
                             .map(x=>x.value)    
                             .filter(f=>f) 
@@ -38,6 +39,12 @@ class Alias{
     public static async youtube(username: string | undefined): Promise<IUsernameCheck | undefined>{
 
         const client=new YoutubePlatform()
+
+        return await client.checkUsernameExists(username??"")
+    }
+
+    public static async tiktok(username:string|undefined):Promise<IUsernameCheck|undefined>{
+        const client= new TikTokPlatform()
 
         return await client.checkUsernameExists(username??"")
     }
