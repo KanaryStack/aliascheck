@@ -2,6 +2,7 @@ import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme: Theme) => ({ 
+
   container: {
     display: "flex",
     justifyContent: "center",
@@ -22,6 +23,10 @@ export default makeStyles((theme: Theme) => ({
         left: "0",
         transform: "translate(13%, 35%)",
      },
+  },
+  switcher: {
+  //   [theme.breakpoints.down("md")]: {
+  //  },
   },
   button: {
     padding: "0.2rem 1.4rem",

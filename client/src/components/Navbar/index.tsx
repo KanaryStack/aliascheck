@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
             <Tabs
               sx={{ marginLeft: "auto" }}
               indicatorColor="primary"
-              textColor="#031521"
+              color="#031521"
               value={value}
               onChange={(e, value) => setValue(value)}
             >
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
               <Tab label="FAQs" />
             </Tabs>
             <button className={classes.button}>Sign up</button>
-            <Box>
+            <Box className={classes.switcher}>
               <Switcher />
             </Box>
           </>
