@@ -50,18 +50,25 @@ const Item = styled(Paper)(({ theme }) => ({
   borderRadius: 10,
 }));
 
-const searchResult: React.FC = () => {
+const SearchResult: React.FC = () => {
   const classes = useStyles();
   return (
     // This the main containr with a width of 100%
     <section className={classes.container}>
       <Container maxWidth="xl">
         <Typography
-          sx={{ margin: 2, paddingTop: 2, textAlign: "center", fontSize: 20, lineHeight: 2 }}
+          sx={{
+            margin: 2,
+            paddingTop: 2,
+            textAlign: "center",
+            fontSize: 20,
+            lineHeight: 2,
+          }}
         >
           Results
         </Typography>
-        <Box className={classes.socialhandles}
+        <Box
+          className={classes.socialhandles}
           sx={{
             gap: 2.75,
           }}
@@ -95,7 +102,12 @@ const searchResult: React.FC = () => {
         </Box>
 
         <Typography
-          sx={{ marginTop: 5,  marginLeft: 3, textAlign: "center", fontWeight: "bold" }}
+          sx={{
+            marginTop: 5,
+            marginLeft: 3,
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
         >
           More personalized options?{" "}
           <span className={classes.span}>See suggestion</span>
@@ -105,4 +117,4 @@ const searchResult: React.FC = () => {
   );
 };
 
-export default searchResult;
+export default SearchResult;

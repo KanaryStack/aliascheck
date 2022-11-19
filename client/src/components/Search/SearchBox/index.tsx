@@ -1,4 +1,6 @@
+import { TextField, Box, Stack, Typography, Button } from "@mui/material";
 import { ChangeEvent } from "react";
+import { theme } from "../../../utils/theme";
 import { useUserInfo } from "../../../utils/userInfoContext";
 import useStyles from "./styles";
 
@@ -7,22 +9,27 @@ const SearchBox: React.FC = () => {
   const { setUsername } = useUserInfo();
 
   return (
-    <div className={classes.container}>
-      <div className={classes.inputGroup}>
-        <input
-          type="text"
-          placeholder="Enter username"
+    <Stack component="form" className={classes.container}>
+      <Box className={classes.inputGroup}>
+        <TextField
+          fullWidth
+          label="Enter username"
+          id="username"
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setUsername(e.target.value)
           }
+          required
+          aria-required="true"
         />
-        <p>
+        <Typography data-testid="hint">
           By using our service you accept our Terms of Service and Privacy
           Policy.
-        </p>
-      </div>
-      <button className={classes.button}>search</button>
-    </div>
+        </Typography>
+      </Box>
+      <Button type="submit" className={classes.button} variant="contained">
+        search
+      </Button>
+    </Stack>
   );
 };
 

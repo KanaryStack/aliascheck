@@ -1,13 +1,17 @@
+import { Box, Typography } from "@mui/material";
 import SearchBox from "../Search/SearchBox";
 import useStyles from "./styles";
 
 const Search: React.FC = () => {
   const classes = useStyles();
   return (
-    <section className={classes.container}>
-      <h3>search for username</h3>
+    <Box component="section" className={classes.container}>
+      <Typography variant="h5" mb={2}>
+        search for username
+      </Typography>
+
       <SearchBox />
-    </section>
+    </Box>
   );
 };
 

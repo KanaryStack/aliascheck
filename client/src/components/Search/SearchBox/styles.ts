@@ -6,99 +6,47 @@ export default makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    gap: "0.3rem",
-    width: "80%", 
+    gap: "2rem",
+    width: "90%",
     maxWidth: "1600px",
 
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      justifyContent: "center",  
+      justifyContent: "center",
       alignItems: "center",
-      gap: "1rem", 
+      gap: "1rem",
     },
-
   },
 
   inputGroup: {
     display: "flex",
-    flexDirection: "column", 
-    alignItems: "center", 
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+    gap: "0.5rem",
 
-    "& > input": {
-      padding: "0.6rem 1rem", 
-      outline: "0",
-      border: "0",
-      color: theme.palette.secondary.light,
-      borderRadius: "1px",
-      boxShadow: `0 0 1px ${theme.palette.secondary.light}`,
+    [theme.breakpoints.up("md")]: {
+      width: "90%",
     },
-    "& > input::placeholder": {
-      color: theme.palette.secondary.light,
-    },
-    "& > input:focus": {
-      boxShadow: `0 0 2px ${theme.palette.secondary.light}`,
-    },
-    "& > p": {
-      // color: theme.palette.primary.contrastText,
-      fontSize: "0.6rem",
-      textAlign: "center",
-    },
-    [theme.breakpoints.up("xs")]: {
-      "& > input": {
-        width: "98%",
-      },
-    },
-    [theme.breakpoints.up("xl")]: {
-      "& > input": {
-        width: "99%",
-      },
-    },
-   
+
     /**============== TABLET ================ */
     [theme.breakpoints.up("lg")]: {
       width: "60%",
       alignItems: "flex-start",
-
-      "& > input": {
-        width: "100%",
-        padding: "1rem",
-        fontSize: "1rem",
-      },
-
-      "& > input::placeholder": {
-        fontSize: "0.9rem",
-      },
     },
   },
+
   button: {
     padding: "0.6rem 1.2rem",
-    width: "max-content",
-    textTransform: "capitalize",
-    fontSize: "0.9rem",
-    justifySelf: "center",
-    alignSelf: "center",
-    color: theme.palette.primary.contrastText,
-    background: theme.palette.primary.main,
-    border: 0,
-    borderRadius: "2px",
-    cursor: "pointer",
     transition: "all 0.3s ease",
 
     "&:hover": {
       transform: "scale(0.9)",
     },
 
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "1rem",
-    },
-
-    [theme.breakpoints.up("md")]: {
-      marginTop: "0",
-    },
-
     [theme.breakpoints.up("lg")]: {
       alignSelf: "flex-start",
-      padding: "1rem 2rem",
+      padding: "0.8rem 2rem",
     },
   },
 }));
