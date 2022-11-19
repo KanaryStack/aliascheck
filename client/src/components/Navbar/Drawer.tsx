@@ -8,7 +8,6 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
-  // AppsIcon,
 } from "@mui/material";
 import AppsIcon from "@mui/icons-material/Apps";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -18,19 +17,21 @@ const items = ["Home", "Services", "FAQs", "Sign up"];
 
 const DrawerComp = () => {
   const [drawer, setDrawer] = useState(false);
+  // const [drawerTheme, setDrawerTheme] = useState();
 
   return (
     <>
       <Drawer
-        anchor="left"
+        anchor="right"
         PaperProps={{
           elevation: 8,
           sx: {
-            margin: "3.5rem 10rem",
-            width: "240",
-            backgroundColor: "#d3d1dfdb",
+            margin: "3.5rem .1rem",
+            width: "70%",
+            backgroundColor: "#e2e0efdb",
             color: "#031521",
-            height: "55vh",
+            // d3d1dfdb
+            height: "85vh",
             alignItems: "center",
           },
         }}
@@ -49,10 +50,17 @@ const DrawerComp = () => {
         </List>
       </Drawer>
       <IconButton
-        sx={{ marginLeft: "auto" }}
+        sx={{
+          marginLeft: "auto",
+          color: "#FAB535",
+        }}
         onClick={() => setDrawer(!drawer)}
       >
-        {drawer === false ? <MenuIcon /> : <CloseIcon />}
+        {drawer === false ? (
+          <MenuIcon sx={{ fontSize: "2rem" }} />
+        ) : (
+          <CloseIcon sx={{ fontSize: "2rem" }} />
+        )}
       </IconButton>
       {/* <Switcher /> */}
     </>

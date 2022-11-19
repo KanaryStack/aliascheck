@@ -10,7 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Switcher from "../Switcher";
-import Link from "next/link";
+// import Link from "next/link";
 import DrawerComp from "./Drawer";
 
 interface Props {
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
             <Tabs
               sx={{ marginLeft: "auto" }}
               indicatorColor="primary"
-              color="#031521"
+              textColor="#031521"
               value={value}
               onChange={(e, value) => setValue(value)}
             >

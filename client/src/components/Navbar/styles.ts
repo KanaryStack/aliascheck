@@ -16,13 +16,14 @@ export default makeStyles((theme: Theme) => ({
      fontSize: "2rem",
      justifySelf: "start",
      cursor: "pointer",
-
+     
      [theme.breakpoints.down("md")]: {
-        position: "absolute",
-        top: "0",
-        left: "0",
-        transform: "translate(13%, 35%)",
-     },
+      position: "absolute",
+      top: "0",
+      left: "0",
+      transform: "translate(13%, 35%)",
+      fontSize: "1.7rem",
+   },
   },
   switcher: {
   //   [theme.breakpoints.down("md")]: {
