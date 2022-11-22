@@ -70,7 +70,9 @@ const SearchResult: React.FC = () => {
         <Box
           className={classes.socialhandles}
           sx={{
-            gap: 2.75,
+            gap: 2,
+            alignItems: "center",
+            justifyContent: "center"
           }}
         >
           {socials.map((social) => (
