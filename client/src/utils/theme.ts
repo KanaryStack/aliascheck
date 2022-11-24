@@ -36,6 +36,50 @@ export const theme = createTheme({
       xl: 1024,
     },
   },
+  components: {
+    MuiTextField: {
+      variants: [
+        {
+          props: {
+            variant: "outlined",
+          },
+          style: {
+            color: "red",
+            // borderRadius: "0.3rem",
+            input: {
+              "&::placeholder": {
+                color: "#FAB535",
+              },
+            },
+            // "& .MuiOutlinedInput-input"; {
+            // color: "red",
+
+            // },
+            "& label": {
+              color: "#FAB535",
+            },
+            "& label.Mui-focused": {
+              color: "#FAB535",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "#FAB535",
+              },
+              "&:hover fieldset": {
+                borderColor: "#FAB535",
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "#FAB535",
+              },
+            },
+            // "& .mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
+            //   color: "#031521",
+            // },
+          },
+        },
+      ],
+    },
+  },
   palette: {
     primary: {
       main: "#FAB535",
@@ -52,15 +96,15 @@ export const theme = createTheme({
 });
 export const lightTheme = createTheme({
   palette: {
-    primary: {main: "#FAB535",},
-    secondary: { main: "#09334F",}, 
+    primary: { main: "#FAB535" },
+    secondary: { main: "#09334F" },
     mode: "light",
   },
 });
 export const darkTheme = createTheme({
-   palette: {
-    primary: {main: "#FAB535",},
-    secondary: {   main: "#09334F",},
-    mode: "dark"
+  palette: {
+    primary: { main: "#FAB535" },
+    secondary: { main: "#09334F" },
+    mode: "dark",
   },
 });

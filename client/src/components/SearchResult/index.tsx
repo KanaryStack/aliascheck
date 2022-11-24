@@ -52,6 +52,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const SearchResult: React.FC = () => {
   const classes = useStyles();
+
   return (
     // This the main containr with a width of 100%
     <section className={classes.container}>
@@ -72,7 +73,7 @@ const SearchResult: React.FC = () => {
           sx={{
             gap: 2,
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           {socials.map((social) => (
