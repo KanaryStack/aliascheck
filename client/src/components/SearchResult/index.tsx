@@ -10,6 +10,7 @@ import MuiAccordionSummary, {
   AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import { useEffect, useRef } from "react";
 
 // Social Media dummy datas
 const socials = [
@@ -94,8 +95,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const SearchResult: React.FC = () => {
   const classes = useStyles();
   const { resolvedTheme } = useTheme();
+  const colorRef = useRef<"black" | "white">();
 
-  const col = resolvedTheme === "light" ? "black" : "white";
+  useEffect(() => {
+    colorRef.current = resolvedTheme === "light" ? "black" : "white";
+  }, [resolvedTheme]);
 
   return (
     // This the main containr with a width of 100%
@@ -151,7 +155,7 @@ const SearchResult: React.FC = () => {
         <Accordion>
           <AccordionSummary
             sx={{
-              color: col,
+              color: colorRef.current,
             }}
             aria-controls="panel1a-content"
             id="panel1a-header"
@@ -175,7 +179,7 @@ const SearchResult: React.FC = () => {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              color: col,
+              color: colorRef.current,
             }}
           >
             <Box
