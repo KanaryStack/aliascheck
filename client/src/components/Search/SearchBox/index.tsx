@@ -1,16 +1,16 @@
 import { TextField, Box, Stack, Typography, Button } from "@mui/material";
 import { useTheme } from "next-themes";
-import { ChangeEvent, useEffect, useRef } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useUserInfo } from "../../../utils/userInfoContext";
 import useStyles from "./styles";
 
 const SearchBox: React.FC = () => {
+  const [modeColor, setModeColor] = useState("");
   const { resolvedTheme } = useTheme();
-  const colorRef = useRef<"black" | "white">();
   const classes = useStyles();
   const { setUsername } = useUserInfo();
   useEffect(() => {
-    colorRef.current = resolvedTheme === "light" ? "black" : "white";
+    setModeColor(resolvedTheme === "light" ? "black" : "white");
   }, [resolvedTheme]);
   return (
     <Stack component="form" className={classes.container}>
@@ -18,7 +18,7 @@ const SearchBox: React.FC = () => {
         <TextField
           sx={{
             ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
-              color: colorRef.current,
+              color: modeColor,
             },
           }}
           fullWidth
