@@ -72,9 +72,6 @@ export const theme = createTheme({
                 borderColor: "#FAB535",
               },
             },
-            // "& .mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
-            //   color: "#031521",
-            // },
           },
         },
       ],

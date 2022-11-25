@@ -1,9 +1,15 @@
 import useStyles from "./styles";
-import { Card, Typography, Box, Paper } from "@mui/material";
+import { useTheme } from "next-themes";
+import { Card, Typography, Box, Paper, TextField, Button } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material/styles";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary, {
+  AccordionSummaryProps,
+} from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
 // Social Media dummy datas
 const socials = [
@@ -50,8 +56,46 @@ const Item = styled(Paper)(({ theme }) => ({
   borderRadius: 10,
 }));
 
+/**
+ * Custom Accordion styles
+ */
+const Accordion = styled((props: AccordionProps) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  border: `none`,
+  background: "transparent",
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&:before": {
+    display: "none",
+  },
+}));
+
+const AccordionSummary = styled((props: AccordionSummaryProps) => (
+  <MuiAccordionSummary {...props} />
+))(({ theme }) => ({
+  "& .MuiAccordionSummary-content": {
+    justifyContent: "center",
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: "1px solid rgba(0, 0, 0, .125)",
+}));
+
+/**
+ * Displays search results and captures details
+ * for generating suggested usernames
+ * @params NULL
+ * @returns React.FC
+ */
 const SearchResult: React.FC = () => {
   const classes = useStyles();
+  const { resolvedTheme } = useTheme();
+
+  const col = resolvedTheme === "light" ? "black" : "white";
 
   return (
     // This the main containr with a width of 100%
@@ -104,17 +148,90 @@ const SearchResult: React.FC = () => {
           ))}
         </Box>
 
-        <Typography
-          sx={{
-            marginTop: 5,
-            marginLeft: 3,
-            textAlign: "center",
-            fontWeight: "bold",
-          }}
-        >
-          More personalized options?{" "}
-          <span className={classes.span}>See suggestion</span>
-        </Typography>
+        <Accordion>
+          <AccordionSummary
+            sx={{
+              color: col,
+            }}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography
+              sx={{
+                marginTop: 5,
+                marginLeft: 3,
+                textAlign: "center",
+                "& > span": {
+                  fontWeight: "bold",
+                },
+                "& > span:hover": {
+                  color: "#FAB535",
+                },
+              }}
+            >
+              More personalized options?{" "}
+              <span className={classes.span}>See suggestion</span>
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails
+            sx={{
+              color: col,
+            }}
+          >
+            <Box
+              component="form"
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "20px",
+                "& .MuiTextField-root": {
+                  mx: 1,
+                  width: "20ch",
+                  textAlign: "center",
+                },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <div>
+                <TextField
+                  variant="outlined"
+                  label="First Name"
+                  placeholder="First Name"
+                  type="text"
+                />
+                <TextField
+                  variant="outlined"
+                  label="last Name"
+                  placeholder="last Name"
+                  type="text"
+                />
+                <TextField
+                  variant="outlined"
+                  label="Favorite Color"
+                  placeholder="Favorite Color"
+                  type="text"
+                />
+                <TextField
+                  variant="outlined"
+                  label="Favorite Number"
+                  placeholder="Favorite Number"
+                  type="number"
+                />
+              </div>
+              <div>
+                <Button
+                  // type="submit"
+                  className={classes.button}
+                  variant="contained"
+                >
+                  search
+                </Button>
+              </div>
+            </Box>
+          </AccordionDetails>
+        </Accordion>
       </Container>
     </section>
   );

@@ -34,7 +34,11 @@ const SearchBox: React.FC = () => {
           Policy.
         </Typography>
       </Box>
-      <Button type="submit" className={classes.button} variant="contained">
+      <Button
+        // type="submit"
+        className={classes.button}
+        variant="contained"
+      >
         search
       </Button>
     </Stack>

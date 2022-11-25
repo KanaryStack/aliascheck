@@ -4,11 +4,11 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme: Theme) => ({
   container: {
     display: "flex",
-    justifyContent:"center",
+    justifyContent: "center",
     alignItems: "center",
   },
 
-  socialhandles:{
+  socialhandles: {
     paddingTop: 5,
     display: "flex",
     alignItems: "center",
@@ -24,5 +24,17 @@ export default makeStyles((theme: Theme) => ({
   },
 
   span: {},
+  button: {
+    padding: "0.6rem 1.2rem",
+    transition: "all 0.3s ease",
 
- }))
+    "&:hover": {
+      transform: "scale(0.9)",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      alignSelf: "flex-start",
+      padding: "0.8rem 2rem",
+    },
+  },
+}));
