@@ -201,24 +201,48 @@ const SearchResult: React.FC = () => {
               <div>
                 <TextField
                   variant="outlined"
+                  sx={{
+                    ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: modeColor,
+                      },
+                  }}
                   label="First Name"
                   placeholder="First Name"
                   type="text"
                 />
                 <TextField
                   variant="outlined"
+                  sx={{
+                    ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: modeColor,
+                      },
+                  }}
                   label="last Name"
                   placeholder="last Name"
                   type="text"
                 />
                 <TextField
                   variant="outlined"
+                  sx={{
+                    ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: modeColor,
+                      },
+                  }}
                   label="Favorite Color"
                   placeholder="Favorite Color"
                   type="text"
                 />
                 <TextField
                   variant="outlined"
+                  sx={{
+                    ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: modeColor,
+                      },
+                  }}
                   label="Favorite Number"
                   placeholder="Favorite Number"
                   type="number"
