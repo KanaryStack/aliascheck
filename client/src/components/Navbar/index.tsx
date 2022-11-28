@@ -9,7 +9,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import Switcher from "../Switcher";
+import Switcher from "./Switcher";
 // import Link from "next/link";
 import DrawerComp from "./Drawer";
 

@@ -6,6 +6,7 @@ import { CacheProvider, EmotionCache, css } from "@emotion/react";
 import createEmotionCache from "../src/utils/createEmotionCache";
 import { ThemeProvider } from "next-themes";
 import { GlobalStyles } from "@mui/material";
+// import Layout from "../src/utils/Layout";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -17,6 +18,7 @@ interface MyAppProps extends AppProps {
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
+    // <Layout >
     <ThemeProvider>
       <CacheProvider value={emotionCache}>
         <Head>
@@ -44,5 +46,6 @@ export default function MyApp(props: MyAppProps) {
         </PageProvider>
       </CacheProvider>
     </ThemeProvider>
+    // </Layout>
   );
 }

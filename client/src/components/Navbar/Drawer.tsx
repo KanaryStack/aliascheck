@@ -12,7 +12,7 @@ import {
 import AppsIcon from "@mui/icons-material/Apps";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import Switcher from "../Switcher";
+import Switcher from "./Switcher";
 const items = ["Home", "Services", "FAQs", "Sign up"];
 
 const DrawerComp = () => {

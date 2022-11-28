@@ -12,16 +12,19 @@ function Intro() {
   return (
     <Box className={classes.container}>
       <Box className={classes.outerBox}>
-        <Box className={classes.outerBox_content} sx={{ px: 8}}>
-          <Typography variant="h1" className={classes.hero} sx={{ m: 1 }}>
+        <Box className={classes.outerBox_content} sx={{ px: 8 }}>
+          <Typography variant="h1" className={classes.hero}>
             Finding unique usernames is
             <span className={classes.hero_fun}>@fun</span> with{" "}
-            <span style={{ fontWeight: "bolder" }}>Aliascheck</span>
+            <span style={{ fontWeight: 900 }}>Aliascheck</span>
           </Typography>
-          <Typography className={classes.hero_article}  sx={{ textAlign: "center" }}>
-            We help you find unique usernames early so that you can claim
-            them. We understand the need of wanting to stand out on social media
-            with usernames and how frustrating finding a unique one can be.
+          <Typography
+            className={classes.hero_article}
+            sx={{ textAlign: "center" }}
+          >
+            We help you find unique usernames early so that you can claim them.
+            We understand the need of wanting to stand out on social media with
+            usernames and how frustrating finding a unique one can be.
           </Typography>
         </Box>
       </Box>

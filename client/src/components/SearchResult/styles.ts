@@ -12,9 +12,7 @@ export default makeStyles((theme: Theme) => ({
     paddingTop: 5,
     display: "flex",
     alignItems: "center",
-    // justifyContent: "center",
     flexWrap: "wrap",
-
     [theme.breakpoints.only("xl")]: {
       paddingRight: 3,
       paddingLeft: 3,

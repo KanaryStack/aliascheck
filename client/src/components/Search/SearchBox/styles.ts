@@ -24,6 +24,7 @@ export default makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "100%",
     gap: "0.5rem",
+    background: "#fff",
 
     [theme.breakpoints.up("md")]: {
       width: "90%",

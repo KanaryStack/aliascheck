@@ -9,22 +9,21 @@ const top_margin = 10,
 export default makeStyles((theme:Theme ) => ({
 
   container: { 
-    borderBottom: ".0001rem solid black",
+    borderBottom: ".00001rem solid black",
     position: "relative",
     width: "100%",
     transition: "all 0.2s linear",
     height: "52vh",
     margin: `${top_margin}px 0`,
     marginBottom: `${5 * top_margin}px`,
-
+    
     // [theme.breakpoints.down("xl")]:{
-    //   height:'89vh',
+    //   height:'80vh',
     // }, 
     [theme.breakpoints.down("lg")]:{
-      height:'89vh',
+      height:'88vh',
     }, 
     [theme.breakpoints.down("md")]:{
-      borderBottom: "none",
       height:'90vh',
     }, 
     [theme.breakpoints.down("sm")]:{
@@ -33,6 +32,31 @@ export default makeStyles((theme:Theme ) => ({
     [theme.breakpoints.down("xs")]:{
       height:'100vh',
     }, 
+
+    // [theme.breakpoints.down(1389)]:{
+    //   height:'55vh',
+    // },
+    // [theme.breakpoints.down(949)]:{
+    //   height:'65vh',
+    // }, 
+    // [theme.breakpoints.down(727)]:{
+    //   height:'70vh',
+    // },  
+    // [theme.breakpoints.down(573)]:{
+    //   height:'80vh',
+    // }, 
+    // [theme.breakpoints.down(458)]:{
+    //   height:'85vh',
+    // }, 
+    // [theme.breakpoints.down(425)]:{
+    //   height:'90vh',
+    // }, 
+    // [theme.breakpoints.down(365)]:{
+    //   height:'95vh',
+    // }, 
+    // [theme.breakpoints.down(320)]:{
+    //   height:'100vh',
+    // }, 
   },
   
   outerBox: {
@@ -52,6 +76,7 @@ export default makeStyles((theme:Theme ) => ({
     paddingTop: "2rem",
     paddingLeft: "12.1875rem",
     paddingRight: "12.1875rem",
+
     [theme.breakpoints.down(1465)]:{
       paddingLeft: "9.375rem",
       paddingRight: "9.375rem",
@@ -85,6 +110,11 @@ export default makeStyles((theme:Theme ) => ({
     fontSize: "3.25rem",
     paddingTop: "1.5rem",
     paddingBottom: "1.5rem",
+    [theme.breakpoints.up("lg")]:{
+      // paddingTop: ".5rem",
+      // paddingBottom: "1rem",
+      // fontSize: "6rem",
+    },
     [theme.breakpoints.down("md")]:{
       paddingTop: ".5rem",
       paddingBottom: "1rem",
@@ -107,13 +137,9 @@ export default makeStyles((theme:Theme ) => ({
     fontSize: "1.4rem",
     p: 5,
 
-    [theme.breakpoints.up("xl")]:{
-      fontSize: "1.5rem",
-      p: 0
+    [theme.breakpoints.between( 728, 'md')]:{
+      fontSize: "1.22rem",
     },
-    // [theme.breakpoints.between( 728, 'md')]:{
-    //   fontSize: "1.22rem",
-    // },
     [theme.breakpoints.up("sm")]:{
       fontSize: "1.1rem",
       p: 0
@@ -203,6 +229,7 @@ export default makeStyles((theme:Theme ) => ({
     [theme.breakpoints.down("lg")]:{
       width: "10rem",
       height: "2.5rem"
+      // display: 'none',
     },
     [theme.breakpoints.down('md')]:{
       display: 'none',
@@ -214,6 +241,7 @@ export default makeStyles((theme:Theme ) => ({
     [theme.breakpoints.down("lg")]:{
       width: "10rem",
       height: "2.5rem"
+      // display: 'none',
     },
     [theme.breakpoints.down('md')]:{
       display: 'none',
