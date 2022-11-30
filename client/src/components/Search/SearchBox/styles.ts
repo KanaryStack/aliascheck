@@ -24,7 +24,6 @@ export default makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "100%",
     gap: "0.5rem",
-    background: "#fff",
 
     [theme.breakpoints.up("md")]: {
       width: "90%",
@@ -40,6 +39,7 @@ export default makeStyles((theme: Theme) => ({
   button: {
     padding: "0.6rem 1.2rem",
     transition: "all 0.3s ease",
+    borderRadius: "3rem",
 
     "&:hover": {
       transform: "scale(0.9)",

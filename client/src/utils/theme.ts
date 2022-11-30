@@ -8,7 +8,6 @@ declare module "@mui/material/styles" {
     md: true;
     lg: true;
     xl: true;
-
   }
 }
 

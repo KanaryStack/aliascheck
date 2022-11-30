@@ -6,9 +6,9 @@ const Search: React.FC = () => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.container}>
-      <Typography variant="h5" mb={2}>
+      {/* <Typography variant="h5" mb={2}>
         search for username
-      </Typography>
+      </Typography> */}
 
       <SearchBox />
     </Box>

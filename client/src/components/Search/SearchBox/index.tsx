@@ -20,6 +20,15 @@ const SearchBox: React.FC = () => {
             ".mui-style-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
               color: modeColor,
             },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderRadius: "5rem",
+                boxShadow: "0 0 25px rgba(0,0,0,0.15)",
+              },
+              "&.Mui-focused fieldset": {
+                borderRadius: "5rem",
+              },
+            },
           }}
           fullWidth
           label="Enter username"

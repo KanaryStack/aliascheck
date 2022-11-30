@@ -11,6 +11,7 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { useEffect, useRef, useState } from "react";
+import { MdCenterFocusStrong } from "react-icons/md";
 
 // Social Media dummy datas
 const socials = [
@@ -198,7 +199,14 @@ const SearchResult: React.FC = () => {
               noValidate
               autoComplete="off"
             >
-              <div>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  gap: "1rem",
+                }}
+              >
                 <TextField
                   variant="outlined"
                   sx={{
@@ -247,8 +255,8 @@ const SearchResult: React.FC = () => {
                   placeholder="Favorite Number"
                   type="number"
                 />
-              </div>
-              <div>
+              </Box>
+              <Box>
                 <Button
                   // type="submit"
                   className={classes.button}
@@ -256,7 +264,7 @@ const SearchResult: React.FC = () => {
                 >
                   search
                 </Button>
-              </div>
+              </Box>
             </Box>
           </AccordionDetails>
         </Accordion>
