@@ -1,6 +1,6 @@
 import { TextField, Box, Stack, Typography, Button } from "@mui/material";
 import { useTheme } from "next-themes";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useUserInfo } from "../../../utils/userInfoContext";
 import useStyles from "./styles";
 
@@ -41,7 +41,7 @@ const SearchBox: React.FC = () => {
           required
           aria-required="true"
         />
-        <Typography data-testid="hint">
+        <Typography data-testid="hint" fontSize="14px">
           By using our service you accept our Terms of Service and Privacy
           Policy.
         </Typography>

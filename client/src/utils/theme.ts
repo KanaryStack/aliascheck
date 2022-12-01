@@ -1,5 +1,5 @@
 import { red } from "@mui/material/colors";
-import { PaletteOptions, createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {

@@ -1,5 +1,5 @@
 import useStyles from "./styles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Typography,
   Box,
@@ -13,17 +13,11 @@ import Switcher from "./Switcher";
 // import Link from "next/link";
 import DrawerComp from "./Drawer";
 
-interface Props {
-  window?: () => Window;
-}
-
 const Navbar: React.FC = () => {
   const classes = useStyles();
   const [value, setValue] = useState();
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
-  useEffect(() => {}, []);
 
   return (
     <>
@@ -40,7 +34,7 @@ const Navbar: React.FC = () => {
             <Tabs
               sx={{ marginLeft: "auto" }}
               indicatorColor="primary"
-              textColor="#031521"
+              textColor="inherit"
               value={value}
               onChange={(e, value) => setValue(value)}
             >

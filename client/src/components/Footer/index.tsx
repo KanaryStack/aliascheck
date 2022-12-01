@@ -1,5 +1,5 @@
 import useStyles from "./styles";
-import { Typography, Grid, Divider } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import Newsletter from "./Newsletter";
 // import Link from "next/link";
 

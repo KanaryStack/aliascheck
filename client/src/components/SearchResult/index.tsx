@@ -10,8 +10,7 @@ import MuiAccordionSummary, {
   AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import { useEffect, useRef, useState } from "react";
-import { MdCenterFocusStrong } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 // Social Media dummy datas
 const socials = [
@@ -63,7 +62,7 @@ const Item = styled(Paper)(({ theme }) => ({
  */
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
+))(() => ({
   border: `none`,
   background: "transparent",
   "&:not(:last-child)": {
@@ -76,7 +75,7 @@ const Accordion = styled((props: AccordionProps) => (
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary {...props} />
-))(({ theme }) => ({
+))(() => ({
   "& .MuiAccordionSummary-content": {
     justifyContent: "center",
   },
