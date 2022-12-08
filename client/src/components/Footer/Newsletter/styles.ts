@@ -4,6 +4,24 @@ import { Theme } from "@mui/material";
 
 export default makeStyles((theme: Theme) => ({
 
+
+  // textField: {
+  //   borderColor: 'green !important'
+  // },
+  input: {
+    // '&::placeholder': {
+    //   color: '#000',
+    // },
+    // blue: {
+    //   color: 'primary',
+    // },
+  },
+  notchedOutline: {
+    // borderWidth: '.0813rem',
+    // borderRadius: '.0625rem',
+    // borderColor: '#404F65 !important',
+  },
+
   inputItems: {
     "& > input": {
       fontFamily: "Poppins",
@@ -22,6 +40,7 @@ export default makeStyles((theme: Theme) => ({
       "& > input": {
         padding: ".3rem .8rem",
         marginLeft: "1.5rem",
+
       },
     },
     [theme.breakpoints.up("xs")]: {
@@ -70,22 +89,30 @@ export default makeStyles((theme: Theme) => ({
 
   submit: {
     cursor: "pointer",
+    boxShadow: 'none',
+    textTransform: 'none',
+    fontSize: 16,
+    padding: '.17rem 1rem',
+    border: '.0031rem solid',
     color: "#F0FDF4",
-    textTransform: "capitalize",
-    transition: "background 1s, color 1s",
     backgroundColor: "#09334F",
-    borderRadius: "0.375rem",
-    background: theme.palette.primary.main,
-    border: 0,
-    fontSize: ".75rem",
-    marginTop: ".4688rem",
-    padding: ".3rem .9rem",
-
+    margin: "1rem 0",
     "&:hover": {
       transform: "scale(0.9)",
+      backgroundColor: '#09334F',
+      borderColor: '#0062cc',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#0062cc',
+      borderColor: '#005cbf',
+    },
+    '&:focus': {
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
     },
     [theme.breakpoints.down("xs")]: {
-      margin: "1rem 4rem",
+
     },
   },
 }));
