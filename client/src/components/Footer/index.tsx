@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.root}>
+      <Box className={classes.root}>
         <Box className={classes.footer}>
           <Box className={classes.first}>
             <h1>Aliascheck</h1>
@@ -20,12 +20,19 @@ const Footer: React.FC = () => {
             </Typography>
             <Box sx={{ textAlign: "center" }}>
               <IconButton
-                sx={{ p: "20px", gap: "20px", color: "#404F65" }}
-                aria-label="menu"
+                sx={{
+                  p: "20px",
+                  gap: "20px",
+                  color: "#404F65",
+                  cursor: "pointer",
+                }}
+                aria-label="delete"
+                disableRipple
+                size="small"
               >
-                <GitHubIcon fontSize="small" />
-                <TwitterIcon fontSize="small" />
-                <LinkedInIcon fontSize="small" />
+                <GitHubIcon href="https://github.com/KanaryStack/aliascheck" />
+                <TwitterIcon />
+                <LinkedInIcon />
               </IconButton>
             </Box>
           </Box>
@@ -41,15 +48,7 @@ const Footer: React.FC = () => {
             <h3>Menu</h3>
             {["Services", "Signup", "Privacy"].map((menu, index) => (
               <Link key={index} href="/">
-                <Typography
-                  sx={{
-                    lineHeight: 1.6,
-                    fontFamily: "poppins",
-                    fontSize: "1.15rem",
-                  }}
-                >
-                  {menu}
-                </Typography>
+                <Typography className={classes.list}>{menu}</Typography>
               </Link>
             ))}
           </Box>
@@ -57,15 +56,7 @@ const Footer: React.FC = () => {
             <h3>Policies</h3>
             {["Terms", "Cookies", "FAQs"].map((policy, index) => (
               <Link key={index} href="/">
-                <Typography
-                  sx={{
-                    lineHeight: 1.6,
-                    fontFamily: "poppins",
-                    fontSize: "1.15rem",
-                  }}
-                >
-                  {policy}
-                </Typography>
+                <Typography className={classes.list}>{policy}</Typography>
               </Link>
             ))}
           </Box>
@@ -76,7 +67,7 @@ const Footer: React.FC = () => {
             &copy;{new Date().getFullYear()} Aliascheck. All rights reserved.
           </Typography>
         </Box>
-      </div>
+      </Box>
     </>
   );
 };

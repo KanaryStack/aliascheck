@@ -3,25 +3,13 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
 
 export default makeStyles((theme: Theme) => ({
-
-
-  // textField: {
-  //   borderColor: 'green !important'
-  // },
   input: {
-    // '&::placeholder': {
-    //   color: '#000',
-    // },
-    // blue: {
-    //   color: 'primary',
-    // },
+    width: "95%",
+    background: "white",
+    "::placeholder": {
+      color: "#000",
+            },
   },
-  notchedOutline: {
-    // borderWidth: '.0813rem',
-    // borderRadius: '.0625rem',
-    // borderColor: '#404F65 !important',
-  },
-
   inputItems: {
     "& > input": {
       fontFamily: "Poppins",
@@ -40,7 +28,6 @@ export default makeStyles((theme: Theme) => ({
       "& > input": {
         padding: ".3rem .8rem",
         marginLeft: "1.5rem",
-
       },
     },
     [theme.breakpoints.up("xs")]: {
@@ -86,7 +73,6 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
-
   submit: {
     cursor: "pointer",
     boxShadow: 'none',
@@ -110,9 +96,6 @@ export default makeStyles((theme: Theme) => ({
     },
     '&:focus': {
       boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-    },
-    [theme.breakpoints.down("xs")]: {
-
     },
   },
 }));

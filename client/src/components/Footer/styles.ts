@@ -16,7 +16,6 @@ export default makeStyles((theme: Theme) => ({
     px: 3,
     [theme.breakpoints.down("md")]: {
       display: "grid",
-      
     },
     [theme.breakpoints.up("xs")]: {
       margin: "0 1.5rem",
@@ -33,10 +32,10 @@ export default makeStyles((theme: Theme) => ({
     },
   },
   first: {
-  textAlign: "center",
-  [theme.breakpoints.up("md")]: {
-    width: "20%",
-  },
+    textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      width: "20%",
+    },
   },
   second: {
     fontSize: "1.2rem",
@@ -59,35 +58,36 @@ export default makeStyles((theme: Theme) => ({
     },
   },
   third: {
-  fontSize: "1.2rem",
-  textAlign: "left",
-  [theme.breakpoints.up("md")]: {
-    width: "10%",
-  },
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1rem",
-    textAlign: "center",
-  },
+    fontSize: "1.2rem",
+    textAlign: "left",
+    [theme.breakpoints.up("md")]: {
+      width: "10%",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem",
+      textAlign: "center",
+    },
   },
   fourth: {
-   fontSize: "1.2rem",
-   textAlign: "left",
-   marginBottom: "16px",
-   [theme.breakpoints.down("md")]: {
-    fontSize: "1.094rem",
+    fontSize: "1.2rem",
+    textAlign: "left",
+    marginBottom: "16px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.094rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "10%",
+    },
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      fontSize: "1rem",
+    },
   },
-  [theme.breakpoints.up("md")]: {
-    width: "10%",
-  },
-  [theme.breakpoints.down("md")]: {
-    textAlign: "center",
-    fontSize: "1rem",
-  },
-  },
-  headerText: {
-  },
-
-  listItems: {
+  list: {
+    lineHeight: 1.6,
+    fontFamily: "poppins",
+    fontSize: "1.15rem",
+    cursor: "pointer",
   },
   footerText: {
     fontFamily: "Poppins",

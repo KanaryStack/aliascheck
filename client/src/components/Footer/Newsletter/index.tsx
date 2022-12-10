@@ -8,20 +8,13 @@ const Newsletter = () => {
     <div>
       <Box>
         <TextField
-          // fullWidth
           id="email"
           placeholder="johndoe@shuffle.dev"
           type="email"
           autoComplete="current-email"
-          variant="outlined"
+          // variant="outlined"
           onChange={handleChange}
-          sx={{
-            width: "95%",
-            background: "white",
-            "::placeholder": {
-              color: "#000",
-            },
-          }}
+          className={classes.input}
           size="small"
         />
       </Box>
