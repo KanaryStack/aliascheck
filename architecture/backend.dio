@@ -1,0 +1,89 @@
+<mxfile host="65bd71144e">
+    <diagram id="jUfvNmmJ0PmYyOY-QcFU" name="Page-1">
+        <mxGraphModel dx="963" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="whiteSpace=wrap;html=1;aspect=auto;imageAspect=0;resizeWidth=1;resizeHeight=1;" vertex="1" parent="1">
+                    <mxGeometry x="165" y="72" width="545" height="474" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Request" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Web UI" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry y="220" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Auth Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="368.37" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="10" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Router" style="rounded=1;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="181" y="240.94" width="138.75" height="39.37" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Controller" style="rounded=1;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="181" y="398" width="138.75" height="39.37" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Services" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="356" y="118" width="190" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Twitter" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="14">
+                    <mxGeometry x="102.81" y="40" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Instagram" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="14">
+                    <mxGeometry x="12.810000000000002" y="130" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Snapshat" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="14">
+                    <mxGeometry x="102.81" y="130" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="TikTok" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="14">
+                    <mxGeometry x="12.810000000000002" y="230" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Facebook" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="369" y="158" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="14">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="406" y="348" as="sourcePoint"/>
+                        <mxPoint x="456" y="298" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="336" y="418"/>
+                            <mxPoint x="336" y="298"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="395" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="56" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="DB acces/models" style="rounded=1;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="583" y="400" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="56">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="547" y="297" as="sourcePoint"/>
+                        <mxPoint x="642" y="377" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="642" y="297"/>
+                            <mxPoint x="642" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="External APIs" style="whiteSpace=wrap;html=1;aspect=auto;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="267" width="90" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
