@@ -5,12 +5,12 @@ import { Box } from "@mui/material";
 const Switcher = () => {
   const { theme, resolvedTheme, setTheme } = useTheme();
   return (
-    <Box sx={{ marginLeft: "4rem" }}>
+    <Box sx={{ textAlign: "center", marginLeft: "2rem" }}>
       <DarkModeSwitch
         checked={theme === "light"}
         onChange={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
         size={20}
-        moonColor="#09334F"
+        moonColor="#031521"
         sunColor="#FAB535"
       />
     </Box>

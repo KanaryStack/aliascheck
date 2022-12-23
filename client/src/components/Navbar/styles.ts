@@ -2,7 +2,21 @@ import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme: Theme) => ({ 
-
+  // root: {
+  //   flexGrow: 1,
+  //   // ".MuiToolbar-root": {
+  //   //   backgroundColor: "#fff",
+  //   // }
+  // },
+  // menuButton: {
+  //   marginRight: theme.spacing(2),
+  // },
+  // title: {
+  //   flexGrow: 1,
+  //   color: "#09334F",
+  //   fontWeight: 700,
+  //   fontSize: "1.5rem",
+  // },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -16,7 +30,6 @@ export default makeStyles((theme: Theme) => ({
      fontSize: "2rem",
      justifySelf: "start",
      cursor: "pointer",
-     
      [theme.breakpoints.down("md")]: {
       position: "absolute",
       top: "0",
@@ -24,10 +37,6 @@ export default makeStyles((theme: Theme) => ({
       transform: "translate(13%, 35%)",
       fontSize: "1.7rem",
    },
-  },
-  switcher: {
-  //   [theme.breakpoints.down("md")]: {
-  //  },
   },
   button: {
     padding: "0.2rem 1.4rem",

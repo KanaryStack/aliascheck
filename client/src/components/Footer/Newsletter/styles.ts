@@ -3,7 +3,13 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
 
 export default makeStyles((theme: Theme) => ({
-
+  input: {
+    width: "95%",
+    background: "white",
+    "::placeholder": {
+      color: "#000",
+            },
+  },
   inputItems: {
     "& > input": {
       fontFamily: "Poppins",
@@ -67,25 +73,29 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
-
   submit: {
     cursor: "pointer",
+    boxShadow: 'none',
+    textTransform: 'none',
+    fontSize: 16,
+    padding: '.17rem 1rem',
+    border: '.0031rem solid',
     color: "#F0FDF4",
-    textTransform: "capitalize",
-    transition: "background 1s, color 1s",
     backgroundColor: "#09334F",
-    borderRadius: "0.375rem",
-    background: theme.palette.primary.main,
-    border: 0,
-    fontSize: ".75rem",
-    marginTop: ".4688rem",
-    padding: ".3rem .9rem",
-
+    margin: "1rem 0",
     "&:hover": {
       transform: "scale(0.9)",
+      backgroundColor: '#09334F',
+      borderColor: '#0062cc',
+      boxShadow: 'none',
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: "1rem 4rem",
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#0062cc',
+      borderColor: '#005cbf',
+    },
+    '&:focus': {
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
     },
   },
 }));
