@@ -8,7 +8,7 @@ export default makeStyles((theme: Theme) => ({
     transition: "all 0.2s linear",
   },
   aligned: {
-    maxWidth: "1200px",
+    maxWidth: "1200px", 
     marginLeft: "auto", 
     marginRight: "auto",
   },
