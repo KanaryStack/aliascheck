@@ -2,21 +2,6 @@ import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme: Theme) => ({ 
-  // root: {
-  //   flexGrow: 1,
-  //   // ".MuiToolbar-root": {
-  //   //   backgroundColor: "#fff",
-  //   // }
-  // },
-  // menuButton: {
-  //   marginRight: theme.spacing(2),
-  // },
-  // title: {
-  //   flexGrow: 1,
-  //   color: "#09334F",
-  //   fontWeight: 700,
-  //   fontSize: "1.5rem",
-  // },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -26,7 +11,7 @@ export default makeStyles((theme: Theme) => ({
     flexGrow: 1,
   },
   title: {
-    fontWeight: 700,
+     fontWeight: 700,
      fontSize: "2rem",
      justifySelf: "start",
      cursor: "pointer",
@@ -39,10 +24,11 @@ export default makeStyles((theme: Theme) => ({
    },
   },
   button: {
-    padding: "0.2rem 1.4rem",
+    width: "100px",
+    padding: "0.2rem .6rem",
     fontWeight: 600,
     fontSize: "1rem",
-    marginLeft: "2.1875rem",
+    marginLeft: ".6rem",
     color: theme.palette.primary.contrastText,
     background: theme.palette.primary.main,
     border: 0,
@@ -51,6 +37,6 @@ export default makeStyles((theme: Theme) => ({
     "&:hover": {
       transform: "scale(0.9)",
       transition: "all 0.3s ease",
-    },    
+    },   
   },
 }));

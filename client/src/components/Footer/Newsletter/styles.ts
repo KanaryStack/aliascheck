@@ -22,7 +22,7 @@ export default makeStyles((theme: Theme) => ({
     },
     "& > input::placeholder": {
       fontSize: ".85rem",
-      color: "gray",
+      color: "black",
     },
     [theme.breakpoints.down("xs")]: {
       "& > input": {

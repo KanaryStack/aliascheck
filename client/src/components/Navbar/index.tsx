@@ -24,44 +24,6 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* <AppBar
-        elevation={0}
-        position="static"
-        enableColorOnDark
-        sx={{
-          ".MuiToolbar-root": {
-            backgroundColor: "#fff",
-          },
-        }}
-      >
-        <Toolbar variant="dense">
-          <Typography variant="h1" className={classes.title}>
-            Aliascheck
-          </Typography>
-          <Switcher />
-          {isMatch ? (
-            <>
-              <DrawerComp />
-            </>
-          ) : (
-            <>
-              <Tabs
-                sx={{ marginLeft: "auto" }}
-                indicatorColor="primary"
-                textColor="primary"
-                value={value}
-                onChange={(e, value) => setValue(value)}
-              >
-                <Tab label="Home" />
-                <Tab label="About" />
-                <Tab label="Services" />
-              </Tabs>
-            </>
-          )}
-          <button className={classes.button}>Sign up</button>
-        </Toolbar>
-      </AppBar> */}
-      {/* </div> */}
       <Toolbar className={classes.container}>
         <Typography variant="h1" className={classes.title} component="div">
           Aliascheck
