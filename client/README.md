@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Please see the [CONTIBUTING.md](./CONTRIBUTING.md) if you would like to contribute to this Repo
 
-You are welcome to contribute to [Aliascheck](https://github.com/KanaryStack/aliascheck). Please see [`Guidelines`](./CONTRIBUTING.md) on how to contibute. We are so happy you found yourself here!
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
