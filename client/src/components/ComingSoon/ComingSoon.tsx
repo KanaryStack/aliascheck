@@ -1,10 +1,8 @@
-import React from "react";
-
 import { Typography, Box, useMediaQuery } from "@mui/material";
 import useStyles from "./styles";
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const classes = useStyles();
   const matches = useMediaQuery("(min-width:600px)");
 
@@ -13,7 +11,7 @@ const Navbar = () => {
       <Box className="classes.container">
         {matches && (
           <Box className={classes.top}>
-            <Image src="/top.png" alt="top" width={200} height={50} />
+            <Image src="/assets/top.png" alt="top" width={200} height={50} />
           </Box>
         )}
         <Box className={classes.aligned}>
@@ -46,7 +44,12 @@ const Navbar = () => {
         </Box>
         {matches && (
           <Box className={classes.bottom}>
-            <Image src="/bottom.png" alt="bottom" width={200} height={100} />
+            <Image
+              src="/assets/bottom.png"
+              alt="bottom"
+              width={200}
+              height={100}
+            />
           </Box>
         )}
       </Box>
